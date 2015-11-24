@@ -1,0 +1,21 @@
+{
+  "name": "netwerven",
+  "version": "1.0.0",
+  "description": "Netwerven Test",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "netwerven"
+  ],
+  "author": "Francisco Caravana (fcaravana@gmail.com)",
+  "license": "GPL"
+}
