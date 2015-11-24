@@ -17,18 +17,14 @@ require.config({
             deps: ['jquery']
         },
         app: {
+            exports: 'angular',
             deps: ['jquery', 'bootstrap', 'angular']
         }
     }
 });
 
-require([
-    'jquery',
-    'bootstrap',
-    'angular',
-    'app'
-], function () {
+require(['jquery', 'bootstrap', 'angular', 'app'], function () {
 
-    console.log("It's where!");
+    angular.bootstrap(document, ['netwervenApp']);
 
 });
