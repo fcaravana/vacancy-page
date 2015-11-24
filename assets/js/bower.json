@@ -1,0 +1,23 @@
+{
+  "name": "netwerven",
+  "authors": [
+    "Francisco Caravana <fcaravana@gmail.com>"
+  ],
+  "description": "test",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "GPL",
+  "homepage": "http://localhost:8080/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4"
+  }
+}
