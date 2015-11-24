@@ -1,0 +1,160 @@
+/* settings */
+/* common */
+html, body {
+  font-family: sans-serif;
+  font-size: 14px; }
+
+/* mixins */
+/* modules */
+/* pages */
+/* home */
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.main {
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  background-image: url("../../assets/images/img-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .main .no-internet {
+    display: none;
+    vertical-align: middle;
+    width: 100px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .main .no-internet .message {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      padding: 25px;
+      background-color: rgba(255, 0, 0, 0.6);
+      color: white; }
+  .main .dashboard {
+    display: table-cell;
+    vertical-align: middle;
+    width: 300px;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px; }
+    .main .dashboard a:link, .main .dashboard a:visited, .main .dashboard a:hover, .main .dashboard a:active {
+      color: white;
+      text-decoration: none; }
+    .main .dashboard .loading {
+      display: table;
+      width: 100%;
+      height: 150px;
+      background-color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 5px;
+      text-align: center; }
+    .main .dashboard .loading-image {
+      width: 60px;
+      height: 60px;
+      display: table-cell;
+      vertical-align: middle;
+      -webkit-animation: spin 1s infinite linear;
+      -moz-animation: spin 1s infinite linear;
+      -o-animation: spin 1s infinite linear;
+      animation: spin 1s infinite linear;
+      background-position: center;
+      background-size: cover; }
+    .main .dashboard .events .col-md-12, .main .dashboard .events .col-md-8, .main .dashboard .events .col-md-4 {
+      padding: 0px; }
+    .main .dashboard .events .col-md-4 {
+      font-size: 12px;
+      text-align: right; }
+    .main .dashboard .events:active {
+      background-color: #0275d8; }
+    .main .dashboard .clock {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      margin: 0 0 5px 0; }
+      .main .dashboard .clock .title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center; }
+      .main .dashboard .clock .digital-clock .time {
+        font-size: 50px; }
+      .main .dashboard .clock .current-date .time {
+        font-size: 14px; }
+    .main .dashboard .events, .main .dashboard .not-found, .main .dashboard .error-message {
+      padding: 20px;
+      margin: 5px 0 5px 0; }
+    .main .dashboard .not-found, .main .dashboard .error-message {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      margin: 5px 0 5px 0; }
+    .main .dashboard .not-found, .main .dashboard .error-message, .main .dashboard .back {
+      width: 100%;
+      height: 100%; }
+    .main .dashboard .not-found p, .main .dashboard .error-message p, .main .dashboard .back p {
+      padding: 40px 0 40px 0;
+      margin-bottom: 0px;
+      text-align: center; }
+    .main .dashboard .event-detail {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      margin: 5px 0 5px 0; }
+      .main .dashboard .event-detail h2 {
+        margin-bottom: 20px; }
+    .main .dashboard .back {
+      padding: 20px;
+      margin: 5px 0 5px 0; }
+    .main .dashboard .back p {
+      padding: 20px 0 20px 0;
+      text-transform: uppercase;
+      font-size: 25px; }
+    .main .dashboard .back:active {
+      background-color: #0275d8; }
+    .main .dashboard .shortcuts {
+      display: inline-block;
+      width: 300px;
+      height: 95px;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden; }
+      .main .dashboard .shortcuts .shortcut {
+        display: inline-block;
+        float: left;
+        text-align: center;
+        width: 95px;
+        height: 95px;
+        font-size: 30px;
+        cursor: pointer; }
+      .main .dashboard .shortcuts .shortcut:nth-child(2) {
+        width: 100px;
+        margin-left: 5px;
+        margin-right: 5px; }
+      .main .dashboard .shortcuts .shortcut > span {
+        color: white;
+        margin-top: 30px; }
+      .main .dashboard .shortcuts .shortcut:active {
+        background-color: #0275d8; }
+    .main .dashboard .transparent-background {
+      background-color: rgba(0, 0, 0, 0.8); }
+    .main .dashboard .blue-background {
+      background-color: #0275d8; }
+
+@media (max-width: 768px) {
+  .main .dashboard {
+    margin: 10px; } }
+
+/*# sourceMappingURL=style.css.map */

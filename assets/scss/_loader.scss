@@ -1,0 +1,15 @@
+/* settings */
+@import 'common/settings';
+
+/* common */
+@import 'common/common';
+@import 'common/application';
+
+/* mixins */
+@import 'mixins/mixin_global';
+
+/* modules */
+@import 'modules/forms';
+
+/* pages */
+@import 'pages/vacancy';

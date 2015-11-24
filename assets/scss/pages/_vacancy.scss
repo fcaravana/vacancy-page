@@ -1,0 +1,215 @@
+/* home */
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.main {
+
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    background-image: url('../../assets/images/img-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    .no-internet {
+
+        display: none;
+        vertical-align: middle;
+        width: 100px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        .message {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            padding: 25px;
+            @include transparent(255, 0, 0, 60);
+            color: white;
+        }
+    }
+
+    .dashboard {
+
+        display: table-cell;
+        vertical-align: middle;
+        width: 300px;
+        color: white;
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+
+        a:link, a:visited, a:hover, a:active {
+            color: white;
+            text-decoration: none;
+        }     
+
+        .loading {
+            display: table;
+            width: 100%;
+            height: 150px;
+            @include transparent(0, 0, 0, 80);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .loading-image {
+            width: 60px;
+            height: 60px;
+            display: table-cell;
+            vertical-align: middle;
+            -webkit-animation: spin 1s infinite linear;
+            -moz-animation: spin 1s infinite linear;
+            -o-animation: spin 1s infinite linear;
+            animation: spin 1s infinite linear;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .events {
+            .col-md-12, .col-md-8, .col-md-4 {
+                padding: 0px;
+            }
+
+            .col-md-4 {
+                font-size: 12px;
+                text-align: right;
+            }
+        }
+
+        .events:active {
+            background-color: #0275d8;
+        }
+
+        .clock {
+            @include transparent(0, 0, 0, 80);
+            padding: 10px;
+            margin: 0 0 5px 0;       
+
+            .title {
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .digital-clock .time {
+                font-size: 50px;
+            }
+
+            .current-date .time {
+                font-size: 14px;
+            }
+        }
+
+        .events, .not-found, .error-message {
+            padding: 20px;
+            margin: 5px 0 5px 0;
+        }
+
+        .not-found, .error-message {
+            @include transparent(0, 0, 0, 80);
+            padding: 20px;
+            margin: 5px 0 5px 0;
+        }
+
+        .not-found, .error-message, .back {
+            width: 100%;
+            height: 100%;
+        }
+
+        .not-found p, .error-message p, .back p {
+            padding: 40px 0 40px 0;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+
+        .event-detail {
+            @include transparent(0, 0, 0, 80);
+            padding: 20px;
+            margin: 5px 0 5px 0;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+
+        .back {
+            padding: 20px;
+            margin: 5px 0 5px 0;
+        }
+
+        .back p {
+            padding: 20px 0 20px 0;
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+
+        .back:active {
+            background-color: #0275d8;
+        }
+
+        .shortcuts {
+
+            display: inline-block;
+            width: 300px;
+            height: 95px;
+            font-size: 0;
+            line-height: 0;
+            overflow: hidden;
+
+            .shortcut {
+                display: inline-block;
+                float: left;
+                text-align: center;
+                width: 95px;
+                height: 95px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .shortcut:nth-child(2) {
+                width: 100px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .shortcut > span {
+                color: white;
+                margin-top: 30px;
+            }
+
+            .shortcut:active {
+                background-color: #0275d8;
+            }
+        }
+
+        .transparent-background {
+            @include transparent(0, 0, 0, 80);
+        }
+
+        .blue-background {
+            background-color: #0275d8;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main {
+        .dashboard { 
+            margin: 10px;
+        }
+    }
+
+}
