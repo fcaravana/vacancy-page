@@ -1,0 +1,119 @@
+/* menu */
+
+.menu {
+
+    width: 100%;
+    display: inline-block;
+    min-height: 45px;
+    line-height: 0;
+    background-color: black;
+
+    .wrap {
+        line-height: 0;
+        width: 100%;
+        text-align: left;
+        background-color: black;
+    }
+
+    .option {
+        width: 100%;
+        min-height: 45px;
+        display: table;
+
+        .text {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-family: 'Yanone Kaffeesatz';
+            font-size: 22px;
+            font-weight: normal;
+            font-style: normal;
+            transform : scale(1, 0.6);
+            -webkit-transform: scale(1, 0.6);
+            -moz-transform: scale(1, 0.6);
+            -ms-transform: scale(1, 0.6);
+            -o-transform: scale(1, 0.6);
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .col-option {
+        display: inline-block;
+        width: fit-content;
+        padding-right: 40px;
+        background-color: black;
+    }
+
+    .col-option:first-child {
+        padding-right: 40px;
+    }
+
+    .col-md-8 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-md-4 {
+        padding-right: 0px;
+    }
+
+    .search {
+
+        display: block;
+        width: 100%;
+        min-height: 45px;
+        overflow: visible;
+        text-align: right;
+        padding: 8px 0 8px 0;
+        background-color: balck;
+        text-align: right;
+
+        input {
+            position: absolute;
+            display: inline-block;
+            top: 8px;
+            right: -70px;
+            width: 310px;
+            height: 29px;
+            background-color: white;
+            border: 0;
+            line-height: 0;
+            background-image: url('../images/search.png');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .field {
+            font-family: 'Yanone Kaffeesatz';
+            color: black;
+            font-size: 15px;
+            line-height: 29px;
+            font-weight: normal;
+            font-style: normal;
+            letter-spacing: 0.5px;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+
+        .col-option {
+            width: 100%;
+        }
+
+        .search {
+
+            text-align: center;
+
+            input {
+                position: inherit;
+                right: auto;
+            }
+        }
+    }
+}

@@ -12,6 +12,16 @@
         <script type="text/javascript" src="assets/js/libs/require.min.js" data-main="assets/js/main.js"></script>
     </head>
     <body>
-        <div>Hello World</div>
+
+        <div class="vacancy">
+            <div class="menu" data-ng-include="'views/menu.html'"></div>
+
+            <div class="title" data-ng-include="'views/vacancy-title.html'"></div>
+            
+            <div class="form" data-ng-include="'views/vacancy-form.html'"></div>
+            
+            <div class="procedure" data-ng-include="'views/vacancy-procedure.html'"></div>
+        </div>
+        
     </body>
 </html>

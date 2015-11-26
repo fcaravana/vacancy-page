@@ -1,160 +1,246 @@
 /* settings */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url("fonts/YanoneKaffeesatz-ExtraLight.eot");
+  src: url("fonts/YanoneKaffeesatz-ExtraLight.eot?#iefix") format("embedded-opentype"), url("fonts/YanoneKaffeesatz-ExtraLight.woff") format("woff"), url("fonts/YanoneKaffeesatz-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url("fonts/YanoneKaffeesatz-Light.eot");
+  src: url("fonts/YanoneKaffeesatz-Light.eot?#iefix") format("embedded-opentype"), url("fonts/YanoneKaffeesatz-Light.woff") format("woff"), url("fonts/YanoneKaffeesatz-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url("fonts/YanoneKaffeesatz-Regular.eot");
+  src: url("fonts/YanoneKaffeesatz-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/YanoneKaffeesatz-Regular.woff") format("woff"), url("fonts/YanoneKaffeesatz-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url("fonts/YanoneKaffeesatz-Bold.eot");
+  src: url("fonts/YanoneKaffeesatz-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/YanoneKaffeesatz-Bold.woff") format("woff"), url("fonts/YanoneKaffeesatz-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'GStar Condensed';
+  src: url("fonts/GStar-Condensed.eot");
+  src: url("fonts/GStar-Condensed.eot?#iefix") format("embedded-opentype"), url("fonts/GStar-Condensed.woff") format("woff"), url("fonts/GStar-Condensed.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 /* common */
+/* application */
 html, body {
   font-family: sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  background-color: #f7f7f7;
+  line-height: 0; }
+
+.site-margin {
+  float: left;
+  width: 16.5%;
+  min-height: 1px; }
+
+.site-container {
+  display: inline-block;
+  float: left;
+  width: 67%;
+  min-height: 1px;
+  text-align: center; }
+
+.none-layer {
+  display: none; }
+
+.block-layer {
+  display: block; }
+
+.inline-layer {
+  display: inline; }
+
+.inline-block-layer {
+  display: inline-block; }
 
 /* mixins */
 /* modules */
-/* pages */
-/* home */
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg); } }
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-.main {
-  display: table;
-  position: absolute;
+/* menu */
+.menu {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: gray;
-  background-image: url("../../assets/images/img-1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center; }
-  .main .no-internet {
-    display: none;
-    vertical-align: middle;
-    width: 100px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center; }
-    .main .no-internet .message {
-      display: block;
-      width: 100px;
-      height: 100px;
-      border-radius: 50px;
-      padding: 25px;
-      background-color: rgba(255, 0, 0, 0.6);
-      color: white; }
-  .main .dashboard {
-    display: table-cell;
-    vertical-align: middle;
-    width: 300px;
-    color: white;
-    font-size: 16px;
+  display: inline-block;
+  min-height: 45px;
+  line-height: 0;
+  background-color: black; }
+  .menu .wrap {
+    line-height: 0;
+    width: 100%;
     text-align: left;
-    padding: 5px; }
-    .main .dashboard a:link, .main .dashboard a:visited, .main .dashboard a:hover, .main .dashboard a:active {
-      color: white;
-      text-decoration: none; }
-    .main .dashboard .loading {
-      display: table;
-      width: 100%;
-      height: 150px;
-      background-color: rgba(0, 0, 0, 0.8);
-      margin-bottom: 5px;
-      text-align: center; }
-    .main .dashboard .loading-image {
-      width: 60px;
-      height: 60px;
+    background-color: black; }
+  .menu .option {
+    width: 100%;
+    min-height: 45px;
+    display: table; }
+    .menu .option .text {
       display: table-cell;
       vertical-align: middle;
-      -webkit-animation: spin 1s infinite linear;
-      -moz-animation: spin 1s infinite linear;
-      -o-animation: spin 1s infinite linear;
-      animation: spin 1s infinite linear;
-      background-position: center;
-      background-size: cover; }
-    .main .dashboard .events .col-md-12, .main .dashboard .events .col-md-8, .main .dashboard .events .col-md-4 {
-      padding: 0px; }
-    .main .dashboard .events .col-md-4 {
-      font-size: 12px;
-      text-align: right; }
-    .main .dashboard .events:active {
-      background-color: #0275d8; }
-    .main .dashboard .clock {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px;
-      margin: 0 0 5px 0; }
-      .main .dashboard .clock .title {
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center; }
-      .main .dashboard .clock .digital-clock .time {
-        font-size: 50px; }
-      .main .dashboard .clock .current-date .time {
-        font-size: 14px; }
-    .main .dashboard .events, .main .dashboard .not-found, .main .dashboard .error-message {
-      padding: 20px;
-      margin: 5px 0 5px 0; }
-    .main .dashboard .not-found, .main .dashboard .error-message {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      margin: 5px 0 5px 0; }
-    .main .dashboard .not-found, .main .dashboard .error-message, .main .dashboard .back {
-      width: 100%;
-      height: 100%; }
-    .main .dashboard .not-found p, .main .dashboard .error-message p, .main .dashboard .back p {
-      padding: 40px 0 40px 0;
-      margin-bottom: 0px;
-      text-align: center; }
-    .main .dashboard .event-detail {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      margin: 5px 0 5px 0; }
-      .main .dashboard .event-detail h2 {
-        margin-bottom: 20px; }
-    .main .dashboard .back {
-      padding: 20px;
-      margin: 5px 0 5px 0; }
-    .main .dashboard .back p {
-      padding: 20px 0 20px 0;
-      text-transform: uppercase;
-      font-size: 25px; }
-    .main .dashboard .back:active {
-      background-color: #0275d8; }
-    .main .dashboard .shortcuts {
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      font-family: 'Yanone Kaffeesatz';
+      font-size: 22px;
+      font-weight: normal;
+      font-style: normal;
+      transform: scale(1, 0.6);
+      -webkit-transform: scale(1, 0.6);
+      -moz-transform: scale(1, 0.6);
+      -ms-transform: scale(1, 0.6);
+      -o-transform: scale(1, 0.6);
+      letter-spacing: 0.5px; }
+  .menu .col-option {
+    display: inline-block;
+    width: fit-content;
+    padding-right: 40px;
+    background-color: black; }
+  .menu .col-option:first-child {
+    padding-right: 40px; }
+  .menu .col-md-8 {
+    margin: 0;
+    padding: 0; }
+  .menu .col-md-4 {
+    padding-right: 0px; }
+  .menu .search {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    overflow: visible;
+    text-align: right;
+    padding: 8px 0 8px 0;
+    background-color: balck;
+    text-align: right; }
+    .menu .search input {
+      position: absolute;
       display: inline-block;
-      width: 300px;
-      height: 95px;
-      font-size: 0;
+      top: 8px;
+      right: -70px;
+      width: 310px;
+      height: 29px;
+      background-color: white;
+      border: 0;
       line-height: 0;
-      overflow: hidden; }
-      .main .dashboard .shortcuts .shortcut {
-        display: inline-block;
-        float: left;
-        text-align: center;
-        width: 95px;
-        height: 95px;
-        font-size: 30px;
-        cursor: pointer; }
-      .main .dashboard .shortcuts .shortcut:nth-child(2) {
-        width: 100px;
-        margin-left: 5px;
-        margin-right: 5px; }
-      .main .dashboard .shortcuts .shortcut > span {
-        color: white;
-        margin-top: 30px; }
-      .main .dashboard .shortcuts .shortcut:active {
-        background-color: #0275d8; }
-    .main .dashboard .transparent-background {
-      background-color: rgba(0, 0, 0, 0.8); }
-    .main .dashboard .blue-background {
-      background-color: #0275d8; }
+      background-image: url("../images/search.png");
+      background-repeat: no-repeat;
+      background-position: right; }
+    .menu .search .field {
+      font-family: 'Yanone Kaffeesatz';
+      color: black;
+      font-size: 15px;
+      line-height: 29px;
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: 0.5px;
+      padding: 0 15px; }
 
 @media (max-width: 768px) {
-  .main .dashboard {
-    margin: 10px; } }
+  .menu .col-option {
+    width: 100%; }
+  .menu .search {
+    text-align: center; }
+    .menu .search input {
+      position: inherit;
+      right: auto; } }
+/* pages */
+/* vacancy page */
+.vacancy {
+  /* title section */
+  /* form section */
+  /* procedure section */ }
+  .vacancy .title {
+    line-height: 0; }
+    .vacancy .title .image {
+      width: 100%;
+      height: 305px;
+      background-image: url("../images/vacancy-image.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      .vacancy .title .image .filter {
+        width: 100%;
+        height: 305px;
+        background-color: rgba(0, 0, 0, 0.5); }
+        .vacancy .title .image .filter .text-wrap {
+          display: table;
+          width: 100%;
+          height: 170px;
+          margin-top: 67.5px;
+          background-color: rgba(0, 0, 0, 0.6); }
+          .vacancy .title .image .filter .text-wrap .text {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            color: white;
+            line-height: 0px; }
+            .vacancy .title .image .filter .text-wrap .text div:first-child {
+              font-family: 'Yanone Kaffeesatz';
+              color: white;
+              font-size: 70px;
+              line-height: 0px;
+              height: 50px;
+              font-weight: bold;
+              font-style: normal;
+              letter-spacing: 0.5px; }
+            .vacancy .title .image .filter .text-wrap .text div:last-child {
+              font-family: 'Yanone Kaffeesatz';
+              color: white;
+              font-size: 40px;
+              line-height: 0px;
+              font-weight: normal;
+              font-style: normal;
+              letter-spacing: 0.5px;
+              padding-top: 5px; }
+  .vacancy .form {
+    width: 100%;
+    min-height: 730px;
+    background-color: #f7f7f7;
+    line-height: 0px; }
+    .vacancy .form .title {
+      text-align: left;
+      line-height: 0px; }
+      .vacancy .form .title .text {
+        text-align: left;
+        font-family: 'Yanone Kaffeesatz';
+        color: black;
+        font-size: 50px;
+        line-height: 50px;
+        height: 50px;
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: 0.5px;
+        margin-top: 50px; }
+  .vacancy .procedure {
+    position: relative;
+    line-height: 0; }
+    .vacancy .procedure .back-to-top {
+      position: absolute;
+      width: 140px;
+      height: 40px;
+      bottom: 0;
+      right: 0;
+      background-color: #f7f7f7; }
+    .vacancy .procedure .image {
+      width: 100%;
+      height: 400px;
+      background-image: url("../images/vacancy-procedure.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      .vacancy .procedure .image .filter {
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.5); }
+        .vacancy .procedure .image .filter .text-wrap {
+          display: table;
+          width: 100%;
+          height: 265px;
+          margin-top: 67.5px;
+          background-color: #f7f7f7; }
 
 /*# sourceMappingURL=style.css.map */
