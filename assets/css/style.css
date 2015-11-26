@@ -29,6 +29,18 @@
   src: url("fonts/GStar-Condensed.eot?#iefix") format("embedded-opentype"), url("fonts/GStar-Condensed.woff") format("woff"), url("fonts/GStar-Condensed.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'Museo Sans 500';
+  src: url("fonts/MuseoSans-500.eot");
+  src: url("fonts/MuseoSans-500.eot?#iefix") format("embedded-opentype"), url("fonts/MuseoSans-500.woff") format("woff"), url("fonts/MuseoSans-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Museo Sans 700';
+  src: url("fonts/MuseoSans-700.eot");
+  src: url("fonts/MuseoSans-700.eot?#iefix") format("embedded-opentype"), url("fonts/MuseoSans-700.woff") format("woff"), url("fonts/MuseoSans-700.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
 /* common */
 /* application */
 html, body {
@@ -163,19 +175,19 @@ html, body {
     line-height: 0; }
     .vacancy .title .image {
       width: 100%;
-      height: 305px;
+      min-height: 305px;
       background-image: url("../images/vacancy-image.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover; }
       .vacancy .title .image .filter {
         width: 100%;
-        height: 305px;
+        min-height: 305px;
         background-color: rgba(0, 0, 0, 0.5); }
         .vacancy .title .image .filter .text-wrap {
           display: table;
           width: 100%;
-          height: 170px;
+          min-height: 170px;
           margin-top: 67.5px;
           background-color: rgba(0, 0, 0, 0.6); }
           .vacancy .title .image .filter .text-wrap .text {
@@ -189,7 +201,7 @@ html, body {
               color: white;
               font-size: 70px;
               line-height: 0px;
-              height: 50px;
+              min-height: 50px;
               font-weight: bold;
               font-style: normal;
               letter-spacing: 0.5px; }
@@ -216,7 +228,7 @@ html, body {
         color: black;
         font-size: 50px;
         line-height: 50px;
-        height: 50px;
+        min-height: 50px;
         font-weight: bold;
         font-style: normal;
         letter-spacing: 0.5px;
@@ -227,7 +239,7 @@ html, body {
     .vacancy .procedure .back-to-top {
       position: absolute;
       width: 140px;
-      height: 40px;
+      min-height: 40px;
       bottom: 0;
       right: 0;
       background-color: #f7f7f7; }
@@ -243,10 +255,61 @@ html, body {
         height: 400px;
         background-color: rgba(0, 0, 0, 0.5); }
         .vacancy .procedure .image .filter .text-wrap {
-          display: table;
           width: 100%;
-          height: 265px;
+          min-height: 260px;
+          text-align: left;
           margin-top: 67.5px;
+          line-height: 0;
           background-color: #f7f7f7; }
+          .vacancy .procedure .image .filter .text-wrap .title {
+            text-align: left;
+            font-family: 'Yanone Kaffeesatz';
+            text-transform: uppercase;
+            color: black;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            font-style: normal;
+            letter-spacing: 0.5px;
+            margin: 30px 0 30px 20px; }
+          .vacancy .procedure .image .filter .text-wrap li {
+            font-family: 'Museo Sans 500';
+            font-size: 14px;
+            line-height: 14px;
+            color: #8c8c8c;
+            padding: 5px 0; }
+          .vacancy .procedure .image .filter .text-wrap .continue {
+            font-family: 'Museo Sans 500';
+            font-size: 14px;
+            line-height: 14px;
+            color: #bdbdbd;
+            margin: 25px 0 25px 20px;
+            cursor: pointer; }
+          .vacancy .procedure .image .filter .text-wrap .subtitle {
+            font-family: 'Museo Sans 700';
+            font-size: 16px;
+            line-height: 16px;
+            color: #8c8c8c;
+            margin: 0 0 0 20px; }
+          .vacancy .procedure .image .filter .text-wrap .contacts, .vacancy .procedure .image .filter .text-wrap .condition {
+            font-family: 'Museo Sans 500';
+            font-size: 14px;
+            line-height: 14px;
+            color: #8c8c8c;
+            padding: 5px 0;
+            margin: 25px 0 0 20px; }
+          .vacancy .procedure .image .filter .text-wrap .condition {
+            float: left;
+            margin: 0 0 0 20px;
+            padding: 0; }
+          .vacancy .procedure .image .filter .text-wrap .mail {
+            float: left;
+            font-family: 'Museo Sans 500';
+            font-size: 14px;
+            line-height: 14px;
+            color: #bdbdbd;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 0 0 5px; }
 
 /*# sourceMappingURL=style.css.map */

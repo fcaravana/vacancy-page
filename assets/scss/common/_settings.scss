@@ -39,11 +39,31 @@
 }
 
 @font-face {
-    font-family: 'GStar Condensed';
-    src: url('fonts/GStar-Condensed.eot');
-    src: url('fonts/GStar-Condensed.eot?#iefix') format('embedded-opentype'),
-        url('fonts/GStar-Condensed.woff') format('woff'),
-        url('fonts/GStar-Condensed.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'GStar Condensed';
+	src: url('fonts/GStar-Condensed.eot');
+	src: url('fonts/GStar-Condensed.eot?#iefix') format('embedded-opentype'),
+		url('fonts/GStar-Condensed.woff') format('woff'),
+		url('fonts/GStar-Condensed.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans 500';
+	src: url('fonts/MuseoSans-500.eot');
+	src: url('fonts/MuseoSans-500.eot?#iefix') format('embedded-opentype'),
+		url('fonts/MuseoSans-500.woff') format('woff'),
+		url('fonts/MuseoSans-500.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans 700';
+	src: url('fonts/MuseoSans-700.eot');
+	src: url('fonts/MuseoSans-700.eot?#iefix') format('embedded-opentype'),
+		url('fonts/MuseoSans-700.woff') format('woff'),
+		url('fonts/MuseoSans-700.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
 }

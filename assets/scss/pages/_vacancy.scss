@@ -8,7 +8,7 @@
 
         .image {
             width: 100%;
-            height: 305px;
+            min-height: 305px;
             background-image: url('../images/vacancy-image.jpg');
             background-repeat: no-repeat;
             background-position: center;
@@ -16,13 +16,13 @@
 
             .filter {
                 width: 100%;
-                height: 305px;
+                min-height: 305px;
                 @include transparent(0, 0, 0, 50);
 
                 .text-wrap {
                     display: table;
                     width: 100%;
-                    height: 170px;
+                    min-height: 170px;
                     margin-top: 67.5px;
                     @include transparent(0, 0, 0, 60);
 
@@ -38,7 +38,7 @@
                             color: white;
                             font-size: 70px;
                             line-height: 0px;
-                            height: 50px;
+                            min-height: 50px;
                             font-weight: bold;
                             font-style: normal;
                             letter-spacing: 0.5px;
@@ -79,7 +79,7 @@
                 color: black;
                 font-size: 50px;
                 line-height: 50px;
-                height: 50px;
+                min-height: 50px;
                 font-weight: bold;
                 font-style: normal;
                 letter-spacing: 0.5px;  
@@ -97,12 +97,12 @@
         .back-to-top {
             position: absolute;
             width: 140px;
-            height: 40px;
+            min-height: 40px;
             bottom: 0;
             right: 0;
             background-color: #f7f7f7;
         }
-        
+
         .image {
             width: 100%;
             height: 400px;
@@ -117,13 +117,80 @@
                 @include transparent(0, 0, 0, 50);
 
                 .text-wrap {
-                    display: table;
+
                     width: 100%;
-                    height: 265px;
+                    min-height: 260px;
+                    text-align: left;
                     margin-top: 67.5px;
+                    line-height: 0;
                     background-color: #f7f7f7;
+
+                    .title {
+                        text-align: left;
+                        font-family: 'Yanone Kaffeesatz';
+                        text-transform: uppercase;
+                        color: black;
+                        font-size: 40px;
+                        line-height: 40px;
+                        font-weight: bold;
+                        font-style: normal;
+                        letter-spacing: 0.5px;
+                        margin: 30px 0 30px 20px;
+                    }
+
+                    li {
+                        font-family: 'Museo Sans 500';
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: #8c8c8c;
+                        padding: 5px 0;
+                    }
+
+                    .continue {
+                        font-family: 'Museo Sans 500';
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: #bdbdbd;
+                        margin: 25px 0 25px 20px;
+                        cursor: pointer;
+                    }
+
+                    .subtitle {         
+                        font-family: 'Museo Sans 700';
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: #8c8c8c;
+                        margin: 0 0 0 20px;
+                    }
+
+                    .contacts, .condition {
+                        font-family: 'Museo Sans 500';
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: #8c8c8c;
+                        padding: 5px 0;
+                        margin: 25px 0 0 20px;
+                    }
+                    
+                    .condition {
+                        float: left;
+                        margin: 0 0 0 20px;
+                        padding: 0;
+                    }
+                    
+                    .mail {
+                        float: left;
+                        font-family: 'Museo Sans 500';
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: #bdbdbd;
+                        cursor: pointer;
+                        padding: 0;
+                        margin: 0 0 0 5px;
+                    }
                 }
             }
+
         }
     }
 }
