@@ -147,6 +147,12 @@ html, body {
     .menu .search input {
       position: inherit;
       right: auto; } }
+/* footer */
+.footer {
+  width: 100%;
+  height: 320px;
+  background-color: #f7f7f7; }
+
 /* pages */
 /* vacancy page */
 .vacancy {
