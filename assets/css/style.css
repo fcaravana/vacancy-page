@@ -178,7 +178,7 @@ html, body {
       color: black;
       text-align: left;
       margin: 0 0 25px 0; }
-    .footer .wrap .col-md-2:first-child {
+    .footer .wrap .col-md-3:first-child {
       padding-left: 0; }
     .footer .wrap .col-md-6 {
       padding-left: 0; }
@@ -192,11 +192,12 @@ html, body {
       .footer .wrap .text .option {
         display: inline-block;
         width: 100%;
-        min-height: 22px; }
+        min-height: 22px;
+        margin: 0 0 2px 0; }
         .footer .wrap .text .option .network, .footer .wrap .text .option .desc {
           float: left; }
         .footer .wrap .text .option .desc {
-          padding: 5px 0 0 0; }
+          padding: 5px 0 0 5px; }
 
 /* pages */
 /* vacancy page */

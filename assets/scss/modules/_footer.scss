@@ -25,14 +25,14 @@
             margin: 0 0 25px 0;
         }
 
-        .col-md-2:first-child {
+        .col-md-3:first-child {
             padding-left: 0;
         }
 
         .col-md-6 {
             padding-left: 0;
         }
-        
+
         .text {
             font-family: 'Museo Sans 500';
             font-size: 12px;
@@ -42,17 +42,18 @@
             text-align: left;
 
             .option {
-                
+
                 display: inline-block;
                 width: 100%;
                 min-height: 22px;
-                
+                margin: 0 0 2px 0;
+
                 .network, .desc {
                     float: left;
                 }
-                
+
                 .desc {
-                    padding: 5px 0 0 0;
+                    padding: 5px 0 0 5px;
                 }
             }
         }
