@@ -4,7 +4,59 @@
 
     width: 100%;
     height: 320px;
-    background-color: #f7f7f7;
+    background-color: white;
+
+    .line {
+        padding-top: 30px;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .wrap {
+
+        margin: 20px 0 40px 0;
+        line-height: 0;
+
+        .title {
+            font-family: 'Museo Sans 500';
+            font-size: 14px;
+            line-height: 14px;
+            color: black;
+            text-align: left;
+            margin: 0 0 25px 0;
+        }
+
+        .col-md-2:first-child {
+            padding-left: 0;
+        }
+
+        .col-md-6 {
+            padding-left: 0;
+        }
+        
+        .text {
+            font-family: 'Museo Sans 500';
+            font-size: 12px;
+            line-height: 12px;
+            color: #bdbdbd;
+            cursor: pointer;
+            text-align: left;
+
+            .option {
+                
+                display: inline-block;
+                width: 100%;
+                min-height: 22px;
+                
+                .network, .desc {
+                    float: left;
+                }
+                
+                .desc {
+                    padding: 5px 0 0 0;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
