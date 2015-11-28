@@ -1,4 +1,5 @@
 /* settings */
+/* settings */
 @font-face {
   font-family: 'Yanone Kaffeesatz';
   src: url("fonts/YanoneKaffeesatz-ExtraLight.eot");
@@ -42,6 +43,14 @@
   font-weight: 600;
   font-style: normal; }
 /* common */
+/* common */
+.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
 /* application */
 html, body {
   font-family: 'Museo Sans 500';
@@ -75,7 +84,60 @@ html, body {
   display: inline-block; }
 
 /* mixins */
+/* mixins */
 /* modules */
+/* forms */
+input:required:invalid,
+input:focus:invalid,
+textarea:required:invalid,
+textarea:focus:invalid {
+  background-image: url("../images/invalid.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: none; }
+
+input:required:valid,
+input:focus:valid,
+textarea:required:valid,
+textarea:focus:valid {
+  background-image: url("../images/valid.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border: none; }
+
+input[type="submit"],
+input[type="submit"]:focus {
+  background-image: url("../images/pixel.png");
+  border: none; }
+
+input:required, textarea:required {
+  border: none;
+  outline: none;
+  border-color: transparent;
+  box-shadow: none; }
+
+input:invalid, textarea:invalid {
+  border: none;
+  outline: none;
+  border-color: transparent;
+  box-shadow: none; }
+
+::-webkit-input-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #aaaaaa; }
+
+:-moz-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #aaaaaa; }
+
+::-moz-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #aaaaaa; }
+
+:-ms-input-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #aaaaaa; }
+
 /* menu */
 .menu {
   width: 100%;
@@ -143,13 +205,12 @@ html, body {
       background-repeat: no-repeat;
       background-position: right; }
     .menu .search .field {
-      font-family: 'Yanone Kaffeesatz';
+      font-family: 'Museo Sans 500';
       color: black;
-      font-size: 15px;
-      line-height: 29px;
+      font-size: 12px;
+      line-height: 30px;
       font-weight: normal;
       font-style: normal;
-      letter-spacing: 0.5px;
       padding: 0 15px; }
 
 @media (max-width: 768px) {
@@ -200,7 +261,7 @@ html, body {
           padding: 5px 0 0 5px; }
 
 /* pages */
-/* vacancy page */
+/* page */
 .vacancy {
   /* title section */
   /* form section */
@@ -209,11 +270,8 @@ html, body {
     line-height: 0; }
     .vacancy .title .image {
       width: 100%;
-      min-height: 305px;
-      background-image: url("../images/vacancy-image.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover; }
+      height: 305px;
+      background-image: url("../images/vacancy-image.jpg"); }
       .vacancy .title .image .filter {
         width: 100%;
         min-height: 305px;
@@ -249,6 +307,7 @@ html, body {
               letter-spacing: 0.5px;
               padding-top: 5px; }
   .vacancy .form {
+    display: inline-block;
     width: 100%;
     min-height: 730px;
     background-color: #f7f7f7;
@@ -266,7 +325,94 @@ html, body {
         font-weight: bold;
         font-style: normal;
         letter-spacing: 0.5px;
-        margin-top: 50px; }
+        margin: 50px 0 50px 0; }
+      .vacancy .form .title .vancancy {
+        text-align: left; }
+        .vacancy .form .title .vancancy .col-md-6, .vacancy .form .title .vancancy .col-md-12 {
+          padding: 0px; }
+        .vacancy .form .title .vancancy .col-md-6:nth-child(odd) {
+          padding-left: 20px;
+          padding-bottom: 20px; }
+        .vacancy .form .title .vancancy .col-md-6:nth-child(even) {
+          padding-right: 20px;
+          padding-bottom: 20px; }
+        .vacancy .form .title .vancancy .col-md-6:nth-child(6), .vacancy .form .title .vancancy .col-md-6:nth-child(7) {
+          padding-bottom: 40px; }
+        .vacancy .form .title .vancancy label {
+          font-family: 'Museo Sans 500';
+          color: black;
+          font-size: 16px;
+          line-height: 16px;
+          min-height: 16px;
+          font-weight: bold;
+          font-style: normal;
+          margin: 0 0 20px 0; }
+          .vacancy .form .title .vancancy label span {
+            font-size: 13px; }
+        .vacancy .form .title .vancancy input {
+          font-family: 'Museo Sans 700';
+          font-size: 14px;
+          width: 100%;
+          height: 42px;
+          line-height: 42px;
+          color: #00395f;
+          padding: 0 45px 0 15px; }
+        .vacancy .form .title .vancancy textarea {
+          font-family: 'Museo Sans 700';
+          font-size: 14px;
+          width: 100%;
+          height: 142px;
+          line-height: 42px;
+          color: #00395f;
+          padding: 0 45px 0 15px; }
+        .vacancy .form .title .vancancy .upload {
+          width: 100%;
+          height: 142px; }
+          .vacancy .form .title .vancancy .upload .col-md-4 {
+            padding: 0px; }
+          .vacancy .form .title .vancancy .upload .col-md-4:nth-child(2) {
+            padding-right: 5px;
+            margin-bottom: 10px; }
+          .vacancy .form .title .vancancy .upload .col-md-4:nth-child(3) {
+            padding-left: 5px;
+            margin-bottom: 10px; }
+          .vacancy .form .title .vancancy .upload label {
+            font-family: 'Museo Sans 500';
+            color: black;
+            font-size: 14px;
+            line-height: 14px;
+            min-height: 14px;
+            font-weight: bold;
+            font-style: normal;
+            margin: 15px 0 0 0; }
+        .vacancy .form .title .vancancy .btn-primary {
+          width: 100%;
+          border-radius: 0px;
+          padding: 10px 30px 10px 30px; }
+        .vacancy .form .title .vancancy .back {
+          font-family: 'Museo Sans 500';
+          font-size: 14px;
+          font-weight: normal;
+          width: 100%;
+          color: #aaaaaa;
+          margin-top: 17px;
+          cursor: pointer; }
+        .vacancy .form .title .vancancy .apply > .col-md-8 {
+          padding: 0px; }
+        .vacancy .form .title .vancancy .apply > .col-md-4:first-child {
+          padding-left: 0px; }
+          .vacancy .form .title .vancancy .apply > .col-md-4:first-child .checkbox {
+            padding-left: 20px; }
+          .vacancy .form .title .vancancy .apply > .col-md-4:first-child input[type="checkbox"] {
+            width: 15px;
+            height: 15px; }
+          .vacancy .form .title .vancancy .apply > .col-md-4:first-child label {
+            font-family: 'Museo Sans 500';
+            font-size: 14px;
+            font-weight: normal;
+            color: #aaaaaa;
+            padding-left: 0px;
+            padding-top: 5px; }
   .vacancy .procedure {
     position: relative;
     line-height: 0; }

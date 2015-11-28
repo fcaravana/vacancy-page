@@ -1,0 +1,61 @@
+/* forms */
+
+input:required:invalid,
+input:focus:invalid,
+textarea:required:invalid,
+textarea:focus:invalid {
+    background-image: url('../images/invalid.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+input:required:valid,
+input:focus:valid,
+textarea:required:valid,
+textarea:focus:valid {
+    background-image: url('../images/valid.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+input[type="submit"], 
+input[type="submit"]:focus {
+    background-image: url('../images/pixel.png');
+    border: none;
+}
+
+input:required, textarea:required {
+    border: none;
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+input:invalid, textarea:invalid {
+    border: none;
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Museo Sans 500';
+    color: #aaaaaa;
+}
+
+:-moz-placeholder { 
+    font-family: 'Museo Sans 500';
+    color: #aaaaaa;
+}
+
+::-moz-placeholder {  
+    font-family: 'Museo Sans 500';
+    color: #aaaaaa;  
+}
+
+:-ms-input-placeholder {  
+    font-family: 'Museo Sans 500';
+    color: #aaaaaa;  
+}

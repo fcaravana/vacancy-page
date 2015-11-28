@@ -1,3 +1,5 @@
+/* mixins */
+
 @mixin transparent($r, $g, $b, $opacity) {
     background-color: rgba($r, $g, $b, $opacity/100);
 }
