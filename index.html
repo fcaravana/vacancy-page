@@ -26,9 +26,15 @@
             <div class="footer" data-ng-include="'views/footer.html'"></div>
         </div>
 
-        <div class="logo"></div>
+        <div class="logo">
+            <div class="open-menu" ng-controller="OpenMenuCtrl" ng-click="openMenu()"></div>
+            <div class="image"></div>
+        </div>
 
-        <div class="cart"></div>
+        <div class="cart">
+            <div class="image"></div>
+            <div class="total">1</div>
+        </div>
 
     </body>
 </html>

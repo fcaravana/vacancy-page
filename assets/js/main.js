@@ -3,7 +3,9 @@ require.config({
     paths: {
         'jquery': 'libs/jquery.min',
         'bootstrap': 'libs/bootstrap.min',
-        'angular': 'libs/angular.min'
+        'angular': 'libs/angular.min',
+        'go-to-top-ctrl': 'app/controllers/go-to-top-ctrl',
+        'open-menu-ctrl': 'app/controllers/open-menu-ctrl'
     },
     shim: {
         jquery: {
@@ -23,7 +25,7 @@ require.config({
     }
 });
 
-require(['jquery', 'bootstrap', 'angular', 'app'], function () {
+require(['jquery', 'bootstrap', 'angular', 'app', 'go-to-top-ctrl', 'open-menu-ctrl'], function () {
 
     angular.bootstrap(document, ['netwervenApp']);
 

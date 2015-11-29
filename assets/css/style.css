@@ -47,24 +47,46 @@
 .logo {
   position: absolute;
   top: 5px;
-  left: 1%;
-  width: 137px;
-  height: 35px;
-  background-image: url("../images/logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  left: 3%; }
+  .logo .open-menu {
+    display: none;
+    float: left;
+    width: 24px;
+    height: 35px;
+    background-image: url("../images/menu-shortcut.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    cursor: pointer; }
+  .logo .image {
+    display: inline-block;
+    float: left;
+    width: 137px;
+    height: 35px;
+    background-image: url("../images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat; }
 
 .cart {
   position: absolute;
   top: 12px;
-  right: 2%;
-  width: 19px;
-  height: 18px;
-  background-image: url("../images/cart.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  right: 3%; }
+  .cart .image {
+    display: inline-block;
+    float: left;
+    width: 19px;
+    height: 18px;
+    background-image: url("../images/cart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .cart .total {
+    display: inline-block;
+    float: left;
+    width: 10px;
+    height: 18px;
+    color: white;
+    padding: 12px; }
 
 .parallax {
   background-position: 100% 100%;
@@ -72,6 +94,14 @@
   background-size: cover;
   background-attachment: fixed; }
 
+@media (max-width: 768px) {
+  .logo {
+    left: 5%; }
+    .logo .open-menu {
+      display: inline-block; }
+
+  .cart {
+    right: 5%; } }
 /* application */
 html, body {
   font-family: 'Museo Sans 500';
@@ -177,6 +207,8 @@ input:invalid, textarea:invalid {
     width: 100%;
     text-align: left;
     background-color: black; }
+  .menu .row > .col-md-8 {
+    display: block; }
   .menu .option {
     width: 100%;
     min-height: 45px;
@@ -213,7 +245,6 @@ input:invalid, textarea:invalid {
     overflow: visible;
     text-align: right;
     padding: 8px 0 8px 0;
-    background-color: balck;
     text-align: right; }
     .menu .search input {
       position: absolute;
@@ -247,6 +278,8 @@ input:invalid, textarea:invalid {
       top: auto;
       right: auto; } }
 @media (max-width: 992px) {
+  .menu .row > .col-md-8 {
+    display: none; }
   .menu .col-md-8, .menu .col-md-4 {
     width: 100%; }
   .menu .col-option {
@@ -256,10 +289,22 @@ input:invalid, textarea:invalid {
 @media (max-width: 768px) {
   .menu .col-md-8, .menu .col-md-4 {
     padding-left: 0px; }
+  .menu .col-md-4 {
+    padding-top: 15px; }
   .menu .col-option {
-    width: 100%; }
+    width: 100%;
+    padding-right: 0; }
+  .menu .option {
+    border-bottom: white solid 1px; }
+  .menu .col-option:first-child {
+    padding-bottom: 15px; }
+    .menu .col-option:first-child .option {
+      border-bottom: 0; }
+  .menu .col-option:nth-child(2) .option {
+    border-top: white solid 1px; }
   .menu .search {
-    text-align: center; }
+    text-align: center;
+    padding: 40px 0 15px 0; }
     .menu .search input {
       width: 100%; } }
 /* footer */
