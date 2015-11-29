@@ -81,7 +81,7 @@
                 margin: 50px 0 50px 0;
             }
 
-            .vancancy {
+            .vacancy {
                 display: inline-block;
                 text-align: left;
 
@@ -171,7 +171,8 @@
                 .btn-primary {
                     width: 100%;
                     border-radius: 0px;
-                    padding: 10px 30px 10px 30px;
+                    min-height: 40px;
+                    padding: 4px 10px 4px 10px;
                 }
 
                 .back {
@@ -183,7 +184,13 @@
                     margin-top: 17px;
                     cursor: pointer;
                 }
-                
+
+                .apply {
+                    .btn-primary > div {
+                        margin-top: 5px;
+                    }
+                }
+
                 .apply > .col-md-8 {
                     padding: 0px;
                 }
@@ -231,15 +238,14 @@
 
         .image {
             width: 100%;
-            height: 400px;
             background-image: url('../images/vacancy-procedure.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
 
             .filter {
+                display: inline-block;
                 width: 100%;
-                height: 400px;
                 @include transparent(0, 0, 0, 50);
 
                 .text-wrap {
@@ -247,6 +253,7 @@
                     min-height: 260px;
                     text-align: left;
                     margin-top: 67.5px;
+                    margin-bottom: 67.5px;
                     line-height: 0;
                     background-color: #f7f7f7;
 
@@ -334,9 +341,73 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .vacancy {
+
+        /* form */
+        .form  {
+
+            .title {
+
+                .vacancy {
+                    .btn-primary {
+                        font-size: 12px;
+                        padding: 4px 4px 4px 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .vacancy {
+
+        /* form */
+        .form  {
+
+            .title {
+
+                .vacancy {
+
+                    .col-md-6, .col-md-12 {
+                        padding: 0 0 20px 0;
+                    }
+
+                    .col-md-6:nth-child(odd) {
+                        padding: 0 0 20px 0;
+                    }
+
+                    .col-md-6:nth-child(even) {
+                        padding: 0 0 20px 0;
+                    }
+
+                    .col-md-6:nth-child(6), .col-md-6:nth-child(7) {
+                        padding: 0 0 20px 0;
+                    }
+                    
+                    .btn-primary {
+                        font-size: 14px;
+                    }
+                    
+                    .upload {
+                        .col-md-4:nth-child(2) {
+                            padding-right: 0px;
+                        }
+                        .col-md-4:nth-child(3) {
+                            padding-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .vacancy {
-        
+
         /* title */
         .title {
 
@@ -362,12 +433,16 @@
                 }
             }
         }
-        
-        .form {
-            .title {
-                .vacancy {
-                    .col-md-6 {
-                        
+
+        /* procedure */
+        .procedure { 
+
+            .image { 
+
+                .filter{ 
+
+                    .text-wrap {
+                        padding-bottom: 40px;
                     }
                 }
             }

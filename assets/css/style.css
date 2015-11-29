@@ -301,6 +301,14 @@ input:invalid, textarea:invalid {
         .footer .wrap .text .option .desc {
           padding: 5px 0 0 5px; }
 
+@media (max-width: 992px) {
+  .footer .wrap .col-md-3, .footer .wrap .col-md-4, .footer .wrap .col-md-2, .footer .wrap .col-md-6 {
+    padding: 0 0 20px 0; }
+  .footer .wrap .title, .footer .wrap .text {
+    text-align: center; }
+  .footer .wrap .text .option {
+    width: auto;
+    padding: 10px 10px; } }
 /* pages */
 /* page */
 .vacancy {
@@ -366,20 +374,20 @@ input:invalid, textarea:invalid {
         font-style: normal;
         letter-spacing: 0.5px;
         margin: 50px 0 50px 0; }
-      .vacancy .form .title .vancancy {
+      .vacancy .form .title .vacancy {
         display: inline-block;
         text-align: left; }
-        .vacancy .form .title .vancancy .col-md-6, .vacancy .form .title .vancancy .col-md-12 {
+        .vacancy .form .title .vacancy .col-md-6, .vacancy .form .title .vacancy .col-md-12 {
           padding: 0px; }
-        .vacancy .form .title .vancancy .col-md-6:nth-child(odd) {
+        .vacancy .form .title .vacancy .col-md-6:nth-child(odd) {
           padding-left: 20px;
           padding-bottom: 20px; }
-        .vacancy .form .title .vancancy .col-md-6:nth-child(even) {
+        .vacancy .form .title .vacancy .col-md-6:nth-child(even) {
           padding-right: 20px;
           padding-bottom: 20px; }
-        .vacancy .form .title .vancancy .col-md-6:nth-child(6), .vacancy .form .title .vancancy .col-md-6:nth-child(7) {
+        .vacancy .form .title .vacancy .col-md-6:nth-child(6), .vacancy .form .title .vacancy .col-md-6:nth-child(7) {
           padding-bottom: 40px; }
-        .vacancy .form .title .vancancy label {
+        .vacancy .form .title .vacancy label {
           font-family: 'Museo Sans 500';
           color: black;
           font-size: 16px;
@@ -388,9 +396,9 @@ input:invalid, textarea:invalid {
           font-weight: bold;
           font-style: normal;
           margin: 0 0 20px 0; }
-          .vacancy .form .title .vancancy label span {
+          .vacancy .form .title .vacancy label span {
             font-size: 13px; }
-        .vacancy .form .title .vancancy input {
+        .vacancy .form .title .vacancy input {
           font-family: 'Museo Sans 700';
           font-size: 14px;
           width: 100%;
@@ -398,7 +406,7 @@ input:invalid, textarea:invalid {
           line-height: 42px;
           color: #00395f;
           padding: 0 45px 0 15px; }
-        .vacancy .form .title .vancancy textarea {
+        .vacancy .form .title .vacancy textarea {
           font-family: 'Museo Sans 700';
           font-size: 14px;
           width: 100%;
@@ -406,19 +414,19 @@ input:invalid, textarea:invalid {
           line-height: 42px;
           color: #00395f;
           padding: 0 45px 0 15px; }
-        .vacancy .form .title .vancancy .upload {
+        .vacancy .form .title .vacancy .upload {
           display: inline-block;
           width: 100%;
           height: 142px; }
-          .vacancy .form .title .vancancy .upload .col-md-4 {
+          .vacancy .form .title .vacancy .upload .col-md-4 {
             padding: 0px; }
-          .vacancy .form .title .vancancy .upload .col-md-4:nth-child(2) {
+          .vacancy .form .title .vacancy .upload .col-md-4:nth-child(2) {
             padding-right: 5px;
             margin-bottom: 10px; }
-          .vacancy .form .title .vancancy .upload .col-md-4:nth-child(3) {
+          .vacancy .form .title .vacancy .upload .col-md-4:nth-child(3) {
             padding-left: 5px;
             margin-bottom: 10px; }
-          .vacancy .form .title .vancancy .upload label {
+          .vacancy .form .title .vacancy .upload label {
             font-family: 'Museo Sans 500';
             color: black;
             font-size: 14px;
@@ -427,11 +435,12 @@ input:invalid, textarea:invalid {
             font-weight: bold;
             font-style: normal;
             margin: 15px 0 0 0; }
-        .vacancy .form .title .vancancy .btn-primary {
+        .vacancy .form .title .vacancy .btn-primary {
           width: 100%;
           border-radius: 0px;
-          padding: 10px 30px 10px 30px; }
-        .vacancy .form .title .vancancy .back {
+          min-height: 40px;
+          padding: 4px 10px 4px 10px; }
+        .vacancy .form .title .vacancy .back {
           font-family: 'Museo Sans 500';
           font-size: 14px;
           font-weight: normal;
@@ -439,16 +448,18 @@ input:invalid, textarea:invalid {
           color: #aaaaaa;
           margin-top: 17px;
           cursor: pointer; }
-        .vacancy .form .title .vancancy .apply > .col-md-8 {
+        .vacancy .form .title .vacancy .apply .btn-primary > div {
+          margin-top: 5px; }
+        .vacancy .form .title .vacancy .apply > .col-md-8 {
           padding: 0px; }
-        .vacancy .form .title .vancancy .apply > .col-md-4:first-child {
+        .vacancy .form .title .vacancy .apply > .col-md-4:first-child {
           padding-left: 0px; }
-          .vacancy .form .title .vancancy .apply > .col-md-4:first-child .checkbox {
+          .vacancy .form .title .vacancy .apply > .col-md-4:first-child .checkbox {
             padding-left: 20px; }
-          .vacancy .form .title .vancancy .apply > .col-md-4:first-child input[type="checkbox"] {
+          .vacancy .form .title .vacancy .apply > .col-md-4:first-child input[type="checkbox"] {
             width: 15px;
             height: 15px; }
-          .vacancy .form .title .vancancy .apply > .col-md-4:first-child label {
+          .vacancy .form .title .vacancy .apply > .col-md-4:first-child label {
             font-family: 'Museo Sans 500';
             font-size: 14px;
             font-weight: normal;
@@ -467,20 +478,20 @@ input:invalid, textarea:invalid {
       background-color: #f7f7f7; }
     .vacancy .procedure .image {
       width: 100%;
-      height: 400px;
       background-image: url("../images/vacancy-procedure.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover; }
       .vacancy .procedure .image .filter {
+        display: inline-block;
         width: 100%;
-        height: 400px;
         background-color: rgba(0, 0, 0, 0.5); }
         .vacancy .procedure .image .filter .text-wrap {
           width: 100%;
           min-height: 260px;
           text-align: left;
           margin-top: 67.5px;
+          margin-bottom: 67.5px;
           line-height: 0;
           background-color: #f7f7f7; }
           .vacancy .procedure .image .filter .text-wrap .title {
@@ -546,15 +557,41 @@ input:invalid, textarea:invalid {
       cursor: pointer;
       padding: 15px 0 0 0; }
 
+@media (max-width: 1200px) {
+  .vacancy {
+    /* form */ }
+    .vacancy .form .title .vacancy .btn-primary {
+      font-size: 12px;
+      padding: 4px 4px 4px 4px; } }
+@media (max-width: 992px) {
+  .vacancy {
+    /* form */ }
+    .vacancy .form .title .vacancy .col-md-6, .vacancy .form .title .vacancy .col-md-12 {
+      padding: 0 0 20px 0; }
+    .vacancy .form .title .vacancy .col-md-6:nth-child(odd) {
+      padding: 0 0 20px 0; }
+    .vacancy .form .title .vacancy .col-md-6:nth-child(even) {
+      padding: 0 0 20px 0; }
+    .vacancy .form .title .vacancy .col-md-6:nth-child(6), .vacancy .form .title .vacancy .col-md-6:nth-child(7) {
+      padding: 0 0 20px 0; }
+    .vacancy .form .title .vacancy .btn-primary {
+      font-size: 14px; }
+    .vacancy .form .title .vacancy .upload .col-md-4:nth-child(2) {
+      padding-right: 0px; }
+    .vacancy .form .title .vacancy .upload .col-md-4:nth-child(3) {
+      padding-left: 0px; } }
 @media (max-width: 768px) {
   .vacancy {
-    /* title */ }
+    /* title */
+    /* procedure */ }
     .vacancy .title .image .filter .text-wrap .text div:first-child {
       font-size: 50px;
       line-height: 50px; }
     .vacancy .title .image .filter .text-wrap .text div:last-child {
       font-size: 30px;
       line-height: 30px;
-      padding-top: 15px; } }
+      padding-top: 15px; }
+    .vacancy .procedure .image .filter .text-wrap {
+      padding-bottom: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
