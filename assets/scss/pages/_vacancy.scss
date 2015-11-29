@@ -2,26 +2,24 @@
 
 .vacancy {
 
-    /* title section */
+    /* title */
     .title {
-
         line-height: 0;
 
         .image {
             width: 100%;
-            height: 305px;
             background-image: url('../images/vacancy-image.jpg');
 
             .filter {
+                display: inline-block;
                 width: 100%;
-                min-height: 305px;
                 @include transparent(0, 0, 0, 50);
 
                 .text-wrap {
                     display: table;
                     width: 100%;
-                    min-height: 170px;
                     margin-top: 67.5px;
+                    margin-bottom: 67.5px;
                     @include transparent(0, 0, 0, 60);
 
                     .text {
@@ -30,13 +28,13 @@
                         text-align: center;
                         color: white;
                         line-height: 0px;
+                        padding: 30px 30px;
 
                         div:first-child {
                             font-family: 'Yanone Kaffeesatz';
                             color: white;
                             font-size: 70px;
-                            line-height: 0px;
-                            min-height: 50px;
+                            line-height: 70px;
                             font-weight: bold;
                             font-style: normal;
                             letter-spacing: 0.5px;
@@ -46,11 +44,10 @@
                             font-family: 'Yanone Kaffeesatz';
                             color: white;
                             font-size: 40px;
-                            line-height: 0px;
+                            line-height: 40px;
                             font-weight: normal;
                             font-style: normal;
                             letter-spacing: 0.5px;
-                            padding-top: 5px;
                         }
                     }
                 }
@@ -58,9 +55,8 @@
         }
     }
 
-    /* form section */
+    /* form */
     .form {
-
         display: inline-block;
         width: 100%;
         min-height: 730px;
@@ -68,7 +64,7 @@
         line-height: 0px;
 
         .title {
-
+            display: inline-block;
             text-align: left;
             line-height: 0px;
 
@@ -86,6 +82,7 @@
             }
 
             .vancancy {
+                display: inline-block;
                 text-align: left;
 
                 .col-md-6, .col-md-12 {
@@ -142,6 +139,7 @@
                 }
 
                 .upload {
+                    display: inline-block;
                     width: 100%;
                     height: 142px;
 
@@ -185,7 +183,7 @@
                     margin-top: 17px;
                     cursor: pointer;
                 }
-
+                
                 .apply > .col-md-8 {
                     padding: 0px;
                 }
@@ -196,7 +194,7 @@
                     .checkbox {
                         padding-left: 20px;
                     }
-                    
+
                     input[type="checkbox"] {
                         width: 15px;
                         height: 15px;
@@ -217,9 +215,8 @@
         }
     }
 
-    /* procedure section */
+    /* procedure */
     .procedure {
-
         position: relative;
         line-height: 0;
 
@@ -246,7 +243,6 @@
                 @include transparent(0, 0, 0, 50);
 
                 .text-wrap {
-
                     width: 100%;
                     min-height: 260px;
                     text-align: left;
@@ -339,5 +335,42 @@
 }
 
 @media (max-width: 768px) {
+    .vacancy {
+        
+        /* title */
+        .title {
 
+            .image {
+
+                .filter {
+
+                    .text-wrap {
+                        .text {
+
+                            div:first-child {
+                                font-size: 50px;
+                                line-height: 50px;
+                            }
+
+                            div:last-child {
+                                font-size: 30px;
+                                line-height: 30px;
+                                padding-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .form {
+            .title {
+                .vacancy {
+                    .col-md-6 {
+                        
+                    }
+                }
+            }
+        }
+    }
 }

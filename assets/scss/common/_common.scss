@@ -1,9 +1,32 @@
 /* common */
 
-.parallax {
-    height: 600px;
-    background-position: 50% 50%;
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 1%;
+    width: 137px;
+    height: 35px;
+    background-image: url('../images/logo.png');
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
+}
+
+.cart {
+    position: absolute;
+    top: 12px;
+    right: 2%;
+    width: 19px;
+    height: 18px;
+    background-image: url('../images/cart.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax {
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }

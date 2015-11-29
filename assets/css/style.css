@@ -44,12 +44,33 @@
   font-style: normal; }
 /* common */
 /* common */
-.parallax {
-  height: 600px;
-  background-position: 50% 50%;
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 1%;
+  width: 137px;
+  height: 35px;
+  background-image: url("../images/logo.png");
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover; }
+
+.cart {
+  position: absolute;
+  top: 12px;
+  right: 2%;
+  width: 19px;
+  height: 18px;
+  background-image: url("../images/cart.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.parallax {
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
 
 /* application */
 html, body {
@@ -83,6 +104,12 @@ html, body {
 .inline-block-layer {
   display: inline-block; }
 
+@media (max-width: 768px) {
+  .site-margin {
+    width: 5%; }
+
+  .site-container {
+    width: 90%; } }
 /* mixins */
 /* mixins */
 /* modules */
@@ -172,11 +199,8 @@ input:invalid, textarea:invalid {
       letter-spacing: 0.5px; }
   .menu .col-option {
     display: inline-block;
-    width: fit-content;
-    padding-right: 40px;
+    padding-right: 6%;
     background-color: black; }
-  .menu .col-option:first-child {
-    padding-right: 40px; }
   .menu .col-md-8 {
     margin: 0;
     padding: 0; }
@@ -213,14 +237,31 @@ input:invalid, textarea:invalid {
       font-style: normal;
       padding: 0 15px; }
 
+@media (max-width: 1200px) {
+  .menu .col-md-8, .menu .col-md-4 {
+    width: 100%; }
+  .menu .search {
+    text-align: right; }
+    .menu .search input {
+      position: static;
+      top: auto;
+      right: auto; } }
+@media (max-width: 992px) {
+  .menu .col-md-8, .menu .col-md-4 {
+    width: 100%; }
+  .menu .col-option {
+    width: 100%; }
+  .menu .search {
+    text-align: center; } }
 @media (max-width: 768px) {
+  .menu .col-md-8, .menu .col-md-4 {
+    padding-left: 0px; }
   .menu .col-option {
     width: 100%; }
   .menu .search {
     text-align: center; }
     .menu .search input {
-      position: inherit;
-      right: auto; } }
+      width: 100%; } }
 /* footer */
 .footer {
   width: 100%;
@@ -263,37 +304,36 @@ input:invalid, textarea:invalid {
 /* pages */
 /* page */
 .vacancy {
-  /* title section */
-  /* form section */
-  /* procedure section */ }
+  /* title */
+  /* form */
+  /* procedure */ }
   .vacancy .title {
     line-height: 0; }
     .vacancy .title .image {
       width: 100%;
-      height: 305px;
       background-image: url("../images/vacancy-image.jpg"); }
       .vacancy .title .image .filter {
+        display: inline-block;
         width: 100%;
-        min-height: 305px;
         background-color: rgba(0, 0, 0, 0.5); }
         .vacancy .title .image .filter .text-wrap {
           display: table;
           width: 100%;
-          min-height: 170px;
           margin-top: 67.5px;
+          margin-bottom: 67.5px;
           background-color: rgba(0, 0, 0, 0.6); }
           .vacancy .title .image .filter .text-wrap .text {
             display: table-cell;
             vertical-align: middle;
             text-align: center;
             color: white;
-            line-height: 0px; }
+            line-height: 0px;
+            padding: 30px 30px; }
             .vacancy .title .image .filter .text-wrap .text div:first-child {
               font-family: 'Yanone Kaffeesatz';
               color: white;
               font-size: 70px;
-              line-height: 0px;
-              min-height: 50px;
+              line-height: 70px;
               font-weight: bold;
               font-style: normal;
               letter-spacing: 0.5px; }
@@ -301,11 +341,10 @@ input:invalid, textarea:invalid {
               font-family: 'Yanone Kaffeesatz';
               color: white;
               font-size: 40px;
-              line-height: 0px;
+              line-height: 40px;
               font-weight: normal;
               font-style: normal;
-              letter-spacing: 0.5px;
-              padding-top: 5px; }
+              letter-spacing: 0.5px; }
   .vacancy .form {
     display: inline-block;
     width: 100%;
@@ -313,6 +352,7 @@ input:invalid, textarea:invalid {
     background-color: #f7f7f7;
     line-height: 0px; }
     .vacancy .form .title {
+      display: inline-block;
       text-align: left;
       line-height: 0px; }
       .vacancy .form .title .text {
@@ -327,6 +367,7 @@ input:invalid, textarea:invalid {
         letter-spacing: 0.5px;
         margin: 50px 0 50px 0; }
       .vacancy .form .title .vancancy {
+        display: inline-block;
         text-align: left; }
         .vacancy .form .title .vancancy .col-md-6, .vacancy .form .title .vancancy .col-md-12 {
           padding: 0px; }
@@ -366,6 +407,7 @@ input:invalid, textarea:invalid {
           color: #00395f;
           padding: 0 45px 0 15px; }
         .vacancy .form .title .vancancy .upload {
+          display: inline-block;
           width: 100%;
           height: 142px; }
           .vacancy .form .title .vancancy .upload .col-md-4 {
@@ -503,5 +545,16 @@ input:invalid, textarea:invalid {
       color: #bcbcbc;
       cursor: pointer;
       padding: 15px 0 0 0; }
+
+@media (max-width: 768px) {
+  .vacancy {
+    /* title */ }
+    .vacancy .title .image .filter .text-wrap .text div:first-child {
+      font-size: 50px;
+      line-height: 50px; }
+    .vacancy .title .image .filter .text-wrap .text div:last-child {
+      font-size: 30px;
+      line-height: 30px;
+      padding-top: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
