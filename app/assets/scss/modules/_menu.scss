@@ -1,0 +1,180 @@
+/* menu */
+
+.menu {
+
+    width: 100%;
+    display: inline-block;
+    min-height: 45px;
+    line-height: 0;
+    background-color: black;
+
+    .wrap {
+        line-height: 0;
+        width: 100%;
+        text-align: left;
+        background-color: black;
+    }
+
+    .row > .col-md-8 {
+        display: block;
+    }
+
+    .option {
+        width: 100%;
+        min-height: 45px;
+        display: table;
+
+        .text {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-family: 'Yanone Kaffeesatz';
+            font-size: 22px;
+            font-weight: normal;
+            font-style: normal;
+            text-transform: uppercase;
+            transform : scale(1, 0.6);
+            -webkit-transform: scale(1, 0.6);
+            -moz-transform: scale(1, 0.6);
+            -ms-transform: scale(1, 0.6);
+            -o-transform: scale(1, 0.6);
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .col-option {
+        display: inline-block;
+        height: 45px;
+        line-height: 45px;
+        padding-right: 6%;
+        background-color: black;
+    }
+
+    .col-md-8 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-md-4 {
+        padding-right: 0px;
+    }
+
+    .search {
+
+        display: block;
+        width: 100%;
+        min-height: 45px;
+        overflow: visible;
+        text-align: right;
+        padding: 8px 0 8px 0;
+        text-align: right;
+
+        input {
+            position: absolute;
+            display: inline-block;
+            top: 8px;
+            right: -70px;
+            width: 310px;
+            height: 29px;
+            background-color: white;
+            border: 0;
+            line-height: 0;
+            background-image: url('../images/search.png');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .field {
+            font-family: 'Museo Sans 500';
+            color: black;
+            font-size: 12px;
+            text-transform: uppercase;
+            line-height: 30px;
+            font-weight: normal;
+            font-style: normal;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .menu {
+
+        .col-md-8, .col-md-4 {
+            width: 100%;
+
+        }
+
+        .search {
+            text-align: right;
+
+            input {
+                position: static;
+                top: auto;
+                right: auto;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .menu {
+
+        .row > .col-md-8 {
+            display: none;
+        }
+
+        .col-md-8, .col-md-4 {
+            width: 100%;
+
+        }
+
+        .col-option {
+            width: 100%;
+        }
+
+        .search {
+            text-align: center;
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+
+        .col-md-8, .col-md-4 {
+            padding-left: 0px;
+        }
+
+        .col-option {
+            width: 100%;
+            padding-right: 0;
+            border-bottom: white solid 1px;
+        }
+
+        .col-option:first-child {
+            padding-bottom: 60px;
+        }
+
+        .search {
+
+            form {
+                text-align: center;
+                padding: 50px 0 15px 0;   
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+}

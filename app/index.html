@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vacancy Apply Page</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="./assets/css/libs/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
+
+        <script type="text/javascript" src="./assets/js/libs/require.min.js" data-main="./assets/js/main.js"></script>
+    </head>
+    <body>
+
+        <div class="vacancy">
+
+            <div class="menu" data-ng-include="'./shared/navigation/menu.html'"></div>
+
+            <div class="title" data-ng-include="'./components/vacancy/title.html'"></div>
+
+            <div class="form" data-ng-include="'./components/vacancy/form.html'"></div>
+
+            <div class="procedure" data-ng-include="'./components/vacancy/procedure.html'"></div>
+
+            <div class="footer" data-ng-include="'./shared/footer/footer.html'"></div>
+        </div>
+
+        <div class="logo">
+            <div class="open-menu" data-ng-controller="MenuCtrl" data-ng-click="openMenu()"></div>
+            <div class="image"></div>
+        </div>
+
+        <div class="cart">
+            <div class="image"></div>
+            <div class="total">1</div>
+        </div>
+
+    </body>
+</html>
