@@ -1,7 +1,7 @@
 {
-  "name": "netwerven",
+  "name": "vacancyApplyPage",
   "version": "1.0.0",
-  "description": "Netwerven Test",
+  "description": "Vacancy page apply...",
   "main": "server.js",
   "dependencies": {
     "express": "^4.13.3"
@@ -14,8 +14,8 @@
     "start": "node server.js"
   },
   "keywords": [
-    "netwerven"
+    "vacancy apply page"
   ],
   "author": "Francisco Caravana (fcaravana@gmail.com)",
-  "license": "GPL"
+  "license": "GPL-3.0"
 }

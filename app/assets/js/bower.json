@@ -1,0 +1,28 @@
+{
+  "name": "vacancyApplyPage",
+  "authors": [
+    "Francisco Caravana <fcaravana@gmail.com>"
+  ],
+  "description": "test",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "GPL",
+  "homepage": "http://localhost:8000/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-translate": "~2.8.1",
+    "angular-translate-loader-partial": "~2.8.1",
+    "requirejs": "~2.1.22"
+  }
+}
