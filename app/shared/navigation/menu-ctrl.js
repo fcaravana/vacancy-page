@@ -4,11 +4,10 @@ define(['app'], function (app) {
 
     app.controller('MenuCtrl', [
         '$scope',
-        '$translatePartialLoader',
-        function (scope, translatePartialLoader) {
+        function (scope) {
 
             /**
-             * Open close menu.
+             * Open, close menu.
              */
             scope.openMenu = function () {
                 $('.menu .row > .col-md-8').toggle();
@@ -19,11 +18,6 @@ define(['app'], function (app) {
                     $('.menu .row > .col-md-8').removeAttr('style');
                 }
             });
-
-            /**
-             * Load translations.
-             */
-            translatePartialLoader.addPart('main');
         }
     ]);
 

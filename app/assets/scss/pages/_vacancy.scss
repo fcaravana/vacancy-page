@@ -32,6 +32,7 @@
 
                         div:first-child {
                             font-family: 'Yanone Kaffeesatz';
+                            text-transform: uppercase;
                             color: white;
                             font-size: 70px;
                             line-height: 70px;
@@ -42,6 +43,7 @@
 
                         div:last-child {
                             font-family: 'Yanone Kaffeesatz';
+                            text-transform: uppercase;
                             color: white;
                             font-size: 40px;
                             line-height: 40px;
@@ -73,6 +75,7 @@
                 font-family: 'Yanone Kaffeesatz';
                 color: black;
                 font-size: 50px;
+                text-transform: uppercase;
                 line-height: 50px;
                 min-height: 50px;
                 font-weight: bold;
@@ -173,6 +176,7 @@
                     border-radius: 0px;
                     min-height: 40px;
                     padding: 4px 10px 4px 10px;
+                    text-transform: uppercase;
                 }
 
                 .back {
@@ -333,6 +337,7 @@
             background-position: 120px 50%;
             font-family: 'Museo Sans 500';
             font-size: 14px;
+            text-transform: uppercase;
             line-height: 14px;
             color: #bcbcbc;
             cursor: pointer;

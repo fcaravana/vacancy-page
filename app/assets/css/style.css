@@ -65,7 +65,8 @@
     height: 35px;
     background-image: url("../images/logo.png");
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    cursor: pointer; }
 
 .cart {
   position: absolute;
@@ -318,6 +319,7 @@ input:invalid, textarea:invalid {
     .footer .wrap .title {
       font-family: 'Museo Sans 500';
       font-size: 14px;
+      text-transform: uppercase;
       line-height: 14px;
       color: black;
       text-align: left;
@@ -381,6 +383,7 @@ input:invalid, textarea:invalid {
             padding: 30px 30px; }
             .vacancy .title .image .filter .text-wrap .text div:first-child {
               font-family: 'Yanone Kaffeesatz';
+              text-transform: uppercase;
               color: white;
               font-size: 70px;
               line-height: 70px;
@@ -389,6 +392,7 @@ input:invalid, textarea:invalid {
               letter-spacing: 0.5px; }
             .vacancy .title .image .filter .text-wrap .text div:last-child {
               font-family: 'Yanone Kaffeesatz';
+              text-transform: uppercase;
               color: white;
               font-size: 40px;
               line-height: 40px;
@@ -410,6 +414,7 @@ input:invalid, textarea:invalid {
         font-family: 'Yanone Kaffeesatz';
         color: black;
         font-size: 50px;
+        text-transform: uppercase;
         line-height: 50px;
         min-height: 50px;
         font-weight: bold;
@@ -481,7 +486,8 @@ input:invalid, textarea:invalid {
           width: 100%;
           border-radius: 0px;
           min-height: 40px;
-          padding: 4px 10px 4px 10px; }
+          padding: 4px 10px 4px 10px;
+          text-transform: uppercase; }
         .vacancy .form .title .vacancy .back {
           font-family: 'Museo Sans 500';
           font-size: 14px;
@@ -594,6 +600,7 @@ input:invalid, textarea:invalid {
       background-position: 120px 50%;
       font-family: 'Museo Sans 500';
       font-size: 14px;
+      text-transform: uppercase;
       line-height: 14px;
       color: #bcbcbc;
       cursor: pointer;

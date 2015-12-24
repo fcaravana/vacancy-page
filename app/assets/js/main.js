@@ -15,8 +15,9 @@ require.config({
         /* app */
         'app': 'app',
         'go-to-top-ctrl': '../../shared/buttons/go-to-top-ctrl',
-        'menu-ctrl': '../../shared/navigation/menu-ctrl'
-        
+        'menu-ctrl': '../../shared/navigation/menu-ctrl',
+        'footer-ctrl': '../../shared/footer/footer-ctrl'
+
     },
     shim: {
         jquery: {
@@ -54,7 +55,8 @@ require([
     'angular-translate-loader-partial',
     'app',
     'go-to-top-ctrl',
-    'menu-ctrl'
+    'menu-ctrl',
+    'footer-ctrl'
 ], function () {
 
     angular.bootstrap(document, ['vacancyApplyPageApp']);

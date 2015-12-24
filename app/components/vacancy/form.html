@@ -2,10 +2,11 @@
     <div class="site-margin"></div>
 
     <div class="site-container">    
-        <div class="text">APPLY FOR THE POSITION OF PURCHASING ASSISTANT</div>
+        <div class="text">{{ "FORM_TITLE" | translate }}</div>
         <div class="vacancy">
 
-            <form name="form-vacancy" action="javascript: void(0);" method="post" enctype="multipart/form-data">
+            <form name="form-vacancy" action="javascript: void(0);" method="post" 
+                  enctype="multipart/form-data">
 
                 <fieldset>
 
@@ -13,43 +14,53 @@
                         <div class="row">
 
                             <div class="col-md-12">
-                                <label>Personal details *</label>
+                                <label>{{ "FORM_PERSONAL_DETAILS" | translate }}</label>
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="first_name" value="" placeholder="First name" required />
+                                <input type="text" name="first_name" value="" 
+                                       placeholder="{{ 'FORM_LABEL_FIRST_NAME' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="last_name" value="" placeholder="Last name" required />
+                                <input type="text" name="last_name" value="" 
+                                       placeholder="{{ 'FORM_LABEL_LAST_NAME' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="city" value="" placeholder="City" required />
+                                <input type="text" name="city" value="" 
+                                       placeholder="{{ 'FORM_LABEL_CITY' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="country" value="" placeholder="Country" required />
+                                <input type="text" name="country" value="" 
+                                       placeholder="{{ 'FORM_LABEL_COUNTRY' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="email" name="email" value="" placeholder="Email" required />
+                                <input type="email" name="email" value="" 
+                                       placeholder="{{ 'FORM_LABEL_EMAIL' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="tel" name="phone" value="" placeholder="Telephone" required />
+                                <input type="tel" name="phone" value="" 
+                                       placeholder="{{ 'FORM_LABEL_TELEPHONE' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <label>Your motivation *</label>
+                                <label>{{ "FORM_MOTIVATION" | translate }}</label>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Attach your documents <span>(pdf, doc(x), jpg max. 4Mb)</span></label>
+                                <label>
+                                    {{ "FORM_ATTACH_DOCS" | translate }} 
+                                    <span>{{ "FORM_UPLOAD_FILES_TYPES" | translate }}</span>
+                                </label>
                             </div>
 
                             <div class="col-md-6">
-                                <textarea class="text-area" name="motivation" rows="40" cols="40" placeholder="Motivation" required></textarea>
+                                <textarea class="text-area" name="motivation" rows="40" cols="40" 
+                                          placeholder="{{ 'FORM_LABEL_MOTIVATION' | translate }}" required></textarea>
                             </div>
 
                             <div class="col-md-6">
@@ -57,52 +68,52 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label>Resume *</label>
+                                                <label>{{ "FORM_RESUME" | translate }}</label>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
                                                     <img src="assets/images/upload-icon.png"> 
-                                                    UPLOAD
+                                                    {{ "BUTTON_UPLOAD" | translate }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
                                                     <img src="assets/images/dropbox-icon.png"> 
-                                                    DROPBOX
+                                                    {{ "BUTTON_DROPBOX" | translate }}
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label>Portfolio</label>
+                                                <label>{{ "FORM_PORTFOLIO" | translate }}</label>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
                                                     <img src="assets/images/upload-icon.png"> 
-                                                    UPLOAD
+                                                    {{ "BUTTON_UPLOAD" | translate }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
                                                     <img src="assets/images/dropbox-icon.png"> 
-                                                    DROPBOX
+                                                    {{ "BUTTON_DROPBOX" | translate }}
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label>Photo</label>
+                                                <label>{{ "FORM_PHOTO" | translate }}</label>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
                                                     <img src="assets/images/upload-icon.png"> 
-                                                    UPLOAD
+                                                    {{ "BUTTON_UPLOAD" | translate }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
                                                     <img src="assets/images/dropbox-icon.png"> 
-                                                    DROPBOX
+                                                    {{ "BUTTON_DROPBOX" | translate }}
                                                 </div>
                                             </div>
                                         </div>
@@ -111,7 +122,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label class="back">< back to job description</label>
+                                <label class="back">< {{ "FORM_BACK_TO_JOB" | translate }}</label>
                             </div>
 
                             <div class="col-md-6">
@@ -120,12 +131,12 @@
                                         <div class="col-md-4">
                                             <div class="checkbox">
                                                 <input type="checkbox" value="">
-                                                <label>Send me a copy</label>
+                                                <label>{{ "FORM_SEND_ME_COPY" | translate }}</label>
                                             </div>
                                         </div>
                                         <div class="col-md-8">
                                             <div class="btn btn-primary">
-                                                <div>APPLY FOR THIS JOB</div>
+                                                <div>{{ "BUTTON_APPLY_JOB" | translate }}</div>
                                             </div>
                                         </div>
                                     </div>
