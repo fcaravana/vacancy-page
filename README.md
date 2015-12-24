@@ -16,5 +16,5 @@ $ bower install
 
 ### Run gulp to copy js libs and css libs
 ```sh
-$ ./node_modules/.bin/gulp gulp default
+$ ./node_modules/.bin/gulp default
 ```
