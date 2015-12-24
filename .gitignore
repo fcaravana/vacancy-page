@@ -1,3 +1,5 @@
 /design/
 /node_modules/
 /app/assets/js/bower_components/
+/app/assets/js/libs/
+/app/assets/css/libs/
