@@ -14,9 +14,11 @@ require.config({
         
         /* app */
         'app': 'app',
+        'valid-file': '../../shared/upload/valid-file',
         'go-to-top-ctrl': '../../shared/buttons/go-to-top-ctrl',
         'menu-ctrl': '../../shared/navigation/menu-ctrl',
-        'footer-ctrl': '../../shared/footer/footer-ctrl'
+        'footer-ctrl': '../../shared/footer/footer-ctrl',
+        'upload-form-ctrl': '../../components/vacancy/upload-form-ctrl'
 
     },
     shim: {
@@ -54,9 +56,11 @@ require([
     'angular-translate',
     'angular-translate-loader-partial',
     'app',
+    'valid-file',
     'go-to-top-ctrl',
     'menu-ctrl',
-    'footer-ctrl'
+    'footer-ctrl',
+    'upload-form-ctrl'
 ], function () {
 
     angular.bootstrap(document, ['vacancyApplyPageApp']);

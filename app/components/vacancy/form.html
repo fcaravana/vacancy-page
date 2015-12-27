@@ -1,12 +1,12 @@
-<div class="title">
+<div class="title" data-ng-controller="UploadFormCtrl">
     <div class="site-margin"></div>
 
     <div class="site-container">    
         <div class="text">{{ "FORM_TITLE" | translate }}</div>
         <div class="vacancy">
 
-            <form name="form-vacancy" action="javascript: void(0);" method="post" 
-                  enctype="multipart/form-data">
+            <form name="formVacancy" action="javascript: void(0);" 
+                  method="post" enctype="multipart/form-data">
 
                 <fieldset>
 
@@ -18,32 +18,32 @@
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="first_name" value="" 
+                                <input type="text" name="first_name" value="" data-ng-model="vacancy.firstName"
                                        placeholder="{{ 'FORM_LABEL_FIRST_NAME' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="last_name" value="" 
+                                <input type="text" name="last_name" value="" data-ng-model="vacancy.lastName"
                                        placeholder="{{ 'FORM_LABEL_LAST_NAME' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="city" value="" 
+                                <input type="text" name="city" value="" data-ng-model="vacancy.city"
                                        placeholder="{{ 'FORM_LABEL_CITY' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="country" value="" 
+                                <input type="text" name="country" value="" data-ng-model="vacancy.country"
                                        placeholder="{{ 'FORM_LABEL_COUNTRY' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="email" name="email" value="" 
+                                <input type="email" name="email" value="" data-ng-model="vacancy.email"
                                        placeholder="{{ 'FORM_LABEL_EMAIL' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="tel" name="phone" value="" 
+                                <input type="tel" name="phone" value="" data-ng-model="vacancy.phone"
                                        placeholder="{{ 'FORM_LABEL_TELEPHONE' | translate }}" required />
                             </div>
 
@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <textarea class="text-area" name="motivation" rows="40" cols="40" 
+                                <textarea class="text-area" name="motivation" rows="40" cols="40" data-ng-model="vacancy.motivation"
                                           placeholder="{{ 'FORM_LABEL_MOTIVATION' | translate }}" required></textarea>
                             </div>
 
@@ -71,14 +71,15 @@
                                                 <label>{{ "FORM_RESUME" | translate }}</label>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="btn btn-primary">
-                                                    <img src="assets/images/upload-icon.png"> 
-                                                    {{ "BUTTON_UPLOAD" | translate }}
+                                                <div class="file-upload btn btn-primary">
+                                                    <img src="assets/images/upload-icon.png" alt="" /> 
+                                                    <span>{{ "BUTTON_UPLOAD" | translate }}</span>
+                                                    <input id="resume" type="file" name="resume" data-ng-model="vacancy.resume" valid-file required class="upload" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
-                                                    <img src="assets/images/dropbox-icon.png"> 
+                                                    <img src="assets/images/dropbox-icon.png" alt="" /> 
                                                     {{ "BUTTON_DROPBOX" | translate }}
                                                 </div>
                                             </div>
@@ -88,14 +89,15 @@
                                                 <label>{{ "FORM_PORTFOLIO" | translate }}</label>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="btn btn-primary">
-                                                    <img src="assets/images/upload-icon.png"> 
-                                                    {{ "BUTTON_UPLOAD" | translate }}
+                                                <div class="file-upload btn btn-primary">
+                                                    <img src="assets/images/upload-icon.png" alt="" /> 
+                                                    <span>{{ "BUTTON_UPLOAD" | translate }}</span>
+                                                    <input id="portfolio" type="file" name="portfolio" data-ng-model="vacancy.portfolio" valid-file class="upload" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
-                                                    <img src="assets/images/dropbox-icon.png"> 
+                                                    <img src="assets/images/dropbox-icon.png" alt="" /> 
                                                     {{ "BUTTON_DROPBOX" | translate }}
                                                 </div>
                                             </div>
@@ -105,14 +107,15 @@
                                                 <label>{{ "FORM_PHOTO" | translate }}</label>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="btn btn-primary">
-                                                    <img src="assets/images/upload-icon.png"> 
-                                                    {{ "BUTTON_UPLOAD" | translate }}
+                                                <div class="file-upload btn btn-primary">
+                                                    <img src="assets/images/upload-icon.png" alt="" /> 
+                                                    <span>{{ "BUTTON_UPLOAD" | translate }}</span>
+                                                    <input id="photo" type="file" name="photo" data-ng-model="vacancy.photo" valid-file class="upload" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="btn btn-primary">
-                                                    <img src="assets/images/dropbox-icon.png"> 
+                                                    <img src="assets/images/dropbox-icon.png" alt="" /> 
                                                     {{ "BUTTON_DROPBOX" | translate }}
                                                 </div>
                                             </div>
@@ -122,7 +125,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label class="back">< {{ "FORM_BACK_TO_JOB" | translate }}</label>
+                                <label class="back">&lt; {{ "FORM_BACK_TO_JOB" | translate }}</label>
                             </div>
 
                             <div class="col-md-6">
@@ -130,14 +133,14 @@
                                     <div class="apply row">
                                         <div class="col-md-4">
                                             <div class="checkbox">
-                                                <input type="checkbox" value="">
+                                                <input type="checkbox" name="copy" value="" data-ng-model="vacancy.copy">
                                                 <label>{{ "FORM_SEND_ME_COPY" | translate }}</label>
                                             </div>
                                         </div>
                                         <div class="col-md-8">
-                                            <div class="btn btn-primary">
-                                                <div>{{ "BUTTON_APPLY_JOB" | translate }}</div>
-                                            </div>
+                                            <button type="submit" class="btn btn-primary" data-ng-disabled="formVacancy.$invalid">
+                                                {{ "BUTTON_APPLY_JOB" | translate }}
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
