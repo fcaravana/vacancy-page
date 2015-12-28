@@ -5,7 +5,7 @@
         <div class="text">{{ "FORM_TITLE" | translate }}</div>
         <div class="vacancy">
 
-            <form name="formVacancy" action="javascript: void(0);" 
+            <form name="formVacancy" action="/vacancy-form" 
                   method="post" enctype="multipart/form-data">
 
                 <fieldset>
@@ -133,7 +133,7 @@
                                     <div class="apply row">
                                         <div class="col-md-4">
                                             <div class="checkbox">
-                                                <input type="checkbox" name="copy" value="" data-ng-model="vacancy.copy">
+                                                <input type="checkbox" name="copy" value="true" data-ng-model="vacancy.copy">
                                                 <label>{{ "FORM_SEND_ME_COPY" | translate }}</label>
                                             </div>
                                         </div>
