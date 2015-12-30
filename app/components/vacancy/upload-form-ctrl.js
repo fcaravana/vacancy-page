@@ -5,15 +5,10 @@ define(['app'], function (app) {
     app.controller('UploadFormCtrl', [
         '$scope',
         '$http',
-        function (scope, http) {
+        function (scope) {
 
             scope.vacancy = {};
 
-            scope.submit = function () {
-
-                console.log(scope.vacancy);
-
-            };
         }
 
     ]);

@@ -74,7 +74,8 @@
                                                 <div class="file-upload btn btn-primary">
                                                     <img src="assets/images/upload-icon.png" alt="" /> 
                                                     <span>{{ "BUTTON_UPLOAD" | translate }}</span>
-                                                    <input id="resume" type="file" name="resume" data-ng-model="vacancy.resume" valid-file required class="upload" />
+                                                    <input id="resume" type="file" name="resume" class="upload" 
+                                                           data-ng-model="vacancy.resume" valid-file required />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -92,7 +93,8 @@
                                                 <div class="file-upload btn btn-primary">
                                                     <img src="assets/images/upload-icon.png" alt="" /> 
                                                     <span>{{ "BUTTON_UPLOAD" | translate }}</span>
-                                                    <input id="portfolio" type="file" name="portfolio" data-ng-model="vacancy.portfolio" valid-file class="upload" />
+                                                    <input id="portfolio" type="file" name="portfolio" class="upload" 
+                                                           data-ng-model="vacancy.portfolio" valid-file />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -110,7 +112,8 @@
                                                 <div class="file-upload btn btn-primary">
                                                     <img src="assets/images/upload-icon.png" alt="" /> 
                                                     <span>{{ "BUTTON_UPLOAD" | translate }}</span>
-                                                    <input id="photo" type="file" name="photo" data-ng-model="vacancy.photo" valid-file class="upload" />
+                                                    <input id="photo" type="file" name="photo" class="upload" 
+                                                           data-ng-model="vacancy.photo" valid-file />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -138,7 +141,8 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8">
-                                            <button type="submit" class="btn btn-primary" data-ng-disabled="formVacancy.$invalid">
+                                            <button type="submit" class="btn btn-primary" 
+                                                    data-ng-disabled="formVacancy.$invalid">
                                                 {{ "BUTTON_APPLY_JOB" | translate }}
                                             </button>
                                         </div>
