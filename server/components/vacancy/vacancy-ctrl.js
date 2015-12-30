@@ -12,7 +12,7 @@ var vacancy = function () {
      */
     var _req = null;
     var _res = null;
-    
+
     var _uploadsPath = 'app/uploads/repo/';
 
     /**
@@ -62,6 +62,13 @@ var vacancy = function () {
 
     };
 
+    /**
+     * Save file to repo.
+     * 
+     * @param {object} uploadFile file object
+     * @param {string} newFileName file name
+     * @returns {undefined}
+     */
     var _saveFile = function (uploadFile, newFileName) {
 
         fs.createReadStream(uploadFile.path).pipe(fs.createWriteStream(_uploadsPath + newFileName));
