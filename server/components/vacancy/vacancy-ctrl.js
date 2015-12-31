@@ -17,7 +17,7 @@ var vacancy = function () {
     var _vacanciesPath = 'app/components/vacancy/';
 
     var _error = false;
-    
+
     /**
      * Start, sets response and request and config settings.
      * 
@@ -98,26 +98,32 @@ var vacancy = function () {
         if (!newVacancy.copy) {
             newVacancy["copy"] = "false";
         }
-        
+
         if (_req.files.resume) {
             var resume = _req.files.resume[0];
-            newVacancy["resume"] = _uploadsPath + 'resume_' + resume.filename + path.extname(resume.originalname);
+            if (path.extname(resume.originalname) === '.pdf') {
+                newVacancy["resume"] = _uploadsPath + 'resume_' + resume.filename + path.extname(resume.originalname);
+            }
         }
-        
+
         if (_req.files.portfolio) {
             var portfolio = _req.files.portfolio[0];
-            newVacancy["portfolio"] = _uploadsPath + 'portfolio_' + portfolio.filename + path.extname(portfolio.originalname);
+            if (portfolio && (path.extname(portfolio.originalname) === '.doc' || path.extname(portfolio.originalname) === '.docx')) {
+                newVacancy["portfolio"] = _uploadsPath + 'portfolio_' + portfolio.filename + path.extname(portfolio.originalname);
+            }
         }
-        
+
         if (_req.files.photo) {
             var photo = _req.files.photo[0];
-            newVacancy["photo"] = _uploadsPath + 'photo_' + photo.filename + path.extname(photo.originalname);
+            if (photo && (path.extname(photo.originalname) === '.jpg' || path.extname(photo.originalname) === '.jpeg')) {
+                newVacancy["photo"] = _uploadsPath + 'photo_' + photo.filename + path.extname(photo.originalname);
+            }
         }
 
         var vacanciesContent = fs.readFileSync(_vacanciesPath + 'vacancies.json');
-        
+
         var vacancies = (vacanciesContent.toString() === '' ? JSON.parse('[]') : JSON.parse(vacanciesContent));
-        
+
         vacancies.push(newVacancy);
 
         var newVacancies = JSON.stringify(vacancies, true, 4);
