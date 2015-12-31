@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/vacancy-form', upload.fields([{name: 'resume', maxCount: 1}, {name: 'portfolio', maxCount: 1}, {name: 'photo', maxCount: 1}]), function (req, res) {
-    
+
     vacancy = new vacancyCtrl();
     vacancy.start(req, res);
     res.redirect('/vacancy-page');
