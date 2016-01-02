@@ -16,5 +16,12 @@ $ bower install
 
 ### Run gulp to copy js libs and css libs
 ```sh
+$ cd vacancy-page
 $ ./node_modules/.bin/gulp default
 ```
+
+### Start http server on port 8000
+```sh
+$ cd vacancy-page
+$ ./node_modules/.bin/nodemon server.js
+```sh
