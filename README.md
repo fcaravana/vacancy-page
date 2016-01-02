@@ -24,4 +24,4 @@ $ ./node_modules/.bin/gulp default
 ```sh
 $ cd vacancy-page
 $ ./node_modules/.bin/nodemon server.js
-```sh
+```
