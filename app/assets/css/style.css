@@ -135,6 +135,9 @@ html, body {
 .inline-block-layer {
   display: inline-block; }
 
+.modal-body {
+  padding: 35px 15px; }
+
 @media (max-width: 768px) {
   .site-margin {
     width: 5%; }

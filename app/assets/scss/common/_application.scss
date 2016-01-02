@@ -38,6 +38,10 @@ html, body {
     display: inline-block;
 }
 
+.modal-body {
+    padding: 35px 15px;
+}
+
 @media (max-width: 768px) {
     
     .site-margin {
