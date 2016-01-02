@@ -28,7 +28,7 @@ define(['app'], function (app) {
                         $('.' + el.attr('name')).css({
                             "background-image": "url('assets/images/valid.png')",
                             "background-repeat": "no-repeat",
-                            "background-position": "right 3px"
+                            "background-position": "right 0px"
                         });
 
                         scope.$apply(function () {
@@ -39,7 +39,7 @@ define(['app'], function (app) {
                         $('.' + el.attr('name')).css({
                             "background-image": "url('assets/images/invalid.png')",
                             "background-repeat": "no-repeat",
-                            "background-position": "right 3px"
+                            "background-position": "right 0px"
                         });
 
                         scope.$apply(function () {

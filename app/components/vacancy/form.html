@@ -18,32 +18,32 @@
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="first_name" value="" data-ng-model="vacancy.firstName"
+                                <input type="text" name="first_name" value="{{ vacancy.firstName }}" data-ng-model="vacancy.firstName"
                                        placeholder="{{ 'FORM_LABEL_FIRST_NAME' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="last_name" value="" data-ng-model="vacancy.lastName"
+                                <input type="text" name="last_name" value="{{ vacancy.lastName }}" data-ng-model="vacancy.lastName"
                                        placeholder="{{ 'FORM_LABEL_LAST_NAME' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="city" value="" data-ng-model="vacancy.city"
+                                <input type="text" name="city" value="{{ vacancy.city }}" data-ng-model="vacancy.city"
                                        placeholder="{{ 'FORM_LABEL_CITY' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" name="country" value="" data-ng-model="vacancy.country"
+                                <input type="text" name="country" value="{{ vacancy.country }}" data-ng-model="vacancy.country"
                                        placeholder="{{ 'FORM_LABEL_COUNTRY' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="email" name="email" value="" data-ng-model="vacancy.email"
+                                <input type="email" name="email" value="{{ vacancy.email }}" data-ng-model="vacancy.email"
                                        placeholder="{{ 'FORM_LABEL_EMAIL' | translate }}" required />
                             </div>
 
                             <div class="col-md-6">
-                                <input type="tel" name="phone" value="" data-ng-model="vacancy.phone"
+                                <input type="tel" name="phone" value="{{ vacancy.phone }}" data-ng-model="vacancy.phone"
                                        placeholder="{{ 'FORM_LABEL_TELEPHONE' | translate }}" required />
                             </div>
 
@@ -60,7 +60,7 @@
 
                             <div class="col-md-6">
                                 <textarea class="text-area" name="motivation" rows="40" cols="40" data-ng-model="vacancy.motivation"
-                                          placeholder="{{ 'FORM_LABEL_MOTIVATION' | translate }}" required></textarea>
+                                          placeholder="{{ 'FORM_LABEL_MOTIVATION' | translate }}" required>{{ vacancy.motivation }}</textarea>
                             </div>
 
                             <div class="col-md-6">

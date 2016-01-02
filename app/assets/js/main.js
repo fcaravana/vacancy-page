@@ -14,6 +14,7 @@ require.config({
         
         /* app */
         'app': 'app',
+        'helpers': '../../shared/helpers/helpers',
         'valid-file': '../../shared/upload/valid-file',
         'go-to-top-ctrl': '../../shared/buttons/go-to-top-ctrl',
         'menu-ctrl': '../../shared/navigation/menu-ctrl',
@@ -56,6 +57,7 @@ require([
     'angular-translate',
     'angular-translate-loader-partial',
     'app',
+    'helpers',
     'valid-file',
     'go-to-top-ctrl',
     'menu-ctrl',

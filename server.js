@@ -1,4 +1,4 @@
-var express = require('express'), multer = require('multer'), fs = require("fs");
+var express = require('express'), multer = require('multer'), fs = require("fs"), querystring = require('querystring');
 
 var upload = multer({dest: './app/uploads/tmp/'});
 app = express();
@@ -13,9 +13,13 @@ app.get('/', function (req, res) {
 
 app.post('/vacancy-form', upload.fields([{name: 'resume', maxCount: 1}, {name: 'portfolio', maxCount: 1}, {name: 'photo', maxCount: 1}]), function (req, res) {
 
+    var url = '/vacancy-page';
+    
     vacancy = new vacancyCtrl();
     vacancy.start(req, res);
-    res.redirect('/vacancy-page');
+    
+    url = (vacancy.error ? url + '?error=' + vacancy.errorCode + '&' + querystring.stringify(req.body) : url + '?success=true');    
+    res.redirect(url);
 
 });
 

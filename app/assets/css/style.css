@@ -474,9 +474,9 @@ input:invalid, textarea:invalid {
           font-size: 14px;
           width: 100%;
           height: 142px;
-          line-height: 42px;
+          line-height: 20px;
           color: #00395f;
-          padding: 0 45px 0 15px; }
+          padding: 10px 45px 10px 15px; }
         .vacancy .form .title .vacancy .upload {
           display: inline-block;
           width: 100%;

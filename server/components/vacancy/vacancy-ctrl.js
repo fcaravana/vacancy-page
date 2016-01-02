@@ -1,3 +1,4 @@
+var helpers = new require('../../shared/helpers/helpers')();
 var fs = require('fs'), path = require('path');
 
 var vacancy = function () {
@@ -16,7 +17,8 @@ var vacancy = function () {
     var _uploadsPath = 'app/uploads/repo/';
     var _vacanciesPath = 'app/components/vacancy/';
 
-    var _error = false;
+    self.error = false;
+    self.errorCode = null;
 
     /**
      * Start, sets response and request and config settings.
@@ -30,10 +32,67 @@ var vacancy = function () {
         _req = req;
         _res = res;
 
-        if (!_error) {
+        if (_verifyFields()) {
             _saveVacancyFiles(req.files);
             _saveVacancy(req.body);
         }
+    };
+
+    /**
+     * Verify form fields.
+     * 
+     * @returns {boolean}
+     */
+    var _verifyFields = function () {
+
+        var fields = _req.body;
+        if (!fields.first_name || !fields.last_name || !fields.city || !fields.country || !fields.email || !fields.phone || !fields.motivation) {
+            self.errorCode = 1;
+        }
+
+        if (!helpers.validateEmail(fields.email)) {
+            self.errorCode = 2;
+        }
+
+        if (_req.files.resume) {
+            var resume = _req.files.resume[0];
+            if (path.extname(resume.originalname) !== '.pdf') {
+                self.errorCode = 3;
+            }
+        }
+
+        if (_req.files.portfolio) {
+            var portfolio = _req.files.portfolio[0];
+            if (portfolio && (path.extname(portfolio.originalname) !== '.doc' && path.extname(portfolio.originalname) !== '.docx')) {
+                self.errorCode = 4;
+            }
+        }
+
+        if (_req.files.photo) {
+            var photo = _req.files.photo[0];
+            if (photo && (path.extname(photo.originalname) !== '.jpg' && path.extname(photo.originalname) !== '.jpeg')) {
+                self.errorCode = 5;
+                fs.unlinkSync(photo.path);
+            }
+        }
+
+        if (self.errorCode !== null) {
+            self.error = true;
+            
+            if (_req.files.resume) {
+                fs.unlinkSync(resume.path);
+            }
+            
+            if (_req.files.portfolio) {
+                fs.unlinkSync(portfolio.path);
+            }
+            
+            if (_req.files.photo) {
+                fs.unlinkSync(photo.path);
+            }
+        }
+
+        return (!self.error);
     };
 
     /**
@@ -48,8 +107,6 @@ var vacancy = function () {
             var resume = files.resume[0];
             if (path.extname(resume.originalname) === '.pdf') {
                 _saveFile(resume, 'resume_' + resume.filename + path.extname(resume.originalname));
-            } else {
-                fs.unlinkSync(resume.path);
             }
         }
 
@@ -57,8 +114,6 @@ var vacancy = function () {
             var portfolio = files.portfolio[0];
             if (portfolio && (path.extname(portfolio.originalname) === '.doc' || path.extname(portfolio.originalname) === '.docx')) {
                 _saveFile(portfolio, 'portfolio_' + portfolio.filename + path.extname(portfolio.originalname));
-            } else {
-                fs.unlinkSync(portfolio.path);
             }
         }
 
@@ -66,8 +121,6 @@ var vacancy = function () {
             var photo = files.photo[0];
             if (photo && (path.extname(photo.originalname) === '.jpg' || path.extname(photo.originalname) === '.jpeg')) {
                 _saveFile(photo, 'photo_' + photo.filename + path.extname(photo.originalname));
-            } else {
-                fs.unlinkSync(photo.path);
             }
         }
 
@@ -96,28 +149,22 @@ var vacancy = function () {
     var _saveVacancy = function (newVacancy) {
 
         if (!newVacancy.copy) {
-            newVacancy["copy"] = "false";
+            newVacancy['copy'] = 'false';
         }
 
         if (_req.files.resume) {
             var resume = _req.files.resume[0];
-            if (path.extname(resume.originalname) === '.pdf') {
-                newVacancy["resume"] = _uploadsPath + 'resume_' + resume.filename + path.extname(resume.originalname);
-            }
+            newVacancy['resume'] = _uploadsPath + 'resume_' + resume.filename + path.extname(resume.originalname);
         }
 
         if (_req.files.portfolio) {
             var portfolio = _req.files.portfolio[0];
-            if (portfolio && (path.extname(portfolio.originalname) === '.doc' || path.extname(portfolio.originalname) === '.docx')) {
-                newVacancy["portfolio"] = _uploadsPath + 'portfolio_' + portfolio.filename + path.extname(portfolio.originalname);
-            }
+            newVacancy['portfolio'] = _uploadsPath + 'portfolio_' + portfolio.filename + path.extname(portfolio.originalname);
         }
 
         if (_req.files.photo) {
             var photo = _req.files.photo[0];
-            if (photo && (path.extname(photo.originalname) === '.jpg' || path.extname(photo.originalname) === '.jpeg')) {
-                newVacancy["photo"] = _uploadsPath + 'photo_' + photo.filename + path.extname(photo.originalname);
-            }
+            newVacancy['photo'] = _uploadsPath + 'photo_' + photo.filename + path.extname(photo.originalname);
         }
 
         var vacanciesContent = fs.readFileSync(_vacanciesPath + 'vacancies.json');
