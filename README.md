@@ -26,6 +26,8 @@ $ cd vacancy-page
 $ node server.js
 ```
 
-### Browser
+* Run 'node server.js' to be able to send mails (and disable antivirus) for development run ./node_modules/.bin/nodemon server.js
+
+### Open browser and type
 
 * http://localhost:8000/
