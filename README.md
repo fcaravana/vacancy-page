@@ -23,5 +23,9 @@ $ ./node_modules/.bin/gulp default
 ### Start http server on port 8000
 ```sh
 $ cd vacancy-page
-$ ./node_modules/.bin/nodemon server.js
+$ node server.js
 ```
+
+### Browser
+
+* http://localhost:8000/

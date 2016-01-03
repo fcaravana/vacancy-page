@@ -1,5 +1,5 @@
 var helpers = new require('../../shared/helpers/helpers')();
-var fs = require('fs'), path = require('path');
+var fs = require('fs'), path = require('path'), nodemailer = require('nodemailer');
 
 var vacancy = function () {
 
@@ -78,15 +78,15 @@ var vacancy = function () {
 
         if (self.errorCode !== null) {
             self.error = true;
-            
+
             if (_req.files.resume) {
                 fs.unlinkSync(resume.path);
             }
-            
+
             if (_req.files.portfolio) {
                 fs.unlinkSync(portfolio.path);
             }
-            
+
             if (_req.files.photo) {
                 fs.unlinkSync(photo.path);
             }
@@ -175,6 +175,35 @@ var vacancy = function () {
 
         var newVacancies = JSON.stringify(vacancies, true, 4);
         fs.writeFileSync(_vacanciesPath + 'vacancies.json', newVacancies);
+
+        if (newVacancy.copy === 'true') {
+            _sendMailCopy(newVacancy.email, 'Vacancy Submit', JSON.stringify(newVacancy, true, 4).replace(new RegExp(_uploadsPath, 'g'), ''));
+        }
+    };
+
+    /**
+     * Send mail to user with a copy of the form data.
+     * 
+     * @param {string} to mail
+     * @param {string} subject subject
+     * @param {string} text mail body
+     * @returns {undefined}
+     */
+    var _sendMailCopy = function (to, subject, text) {
+
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {user: 'fcaravana.meetings@gmail.com', pass: 'aminhapasse'}
+        }, {
+            from: 'fcaravana.meetings@gmail.com',
+            headers: {'Vacancy-Page-Submit': 'Sent'}
+        });
+
+        transporter.sendMail({
+            to: to,
+            subject: subject,
+            text: text
+        });
 
     };
 
