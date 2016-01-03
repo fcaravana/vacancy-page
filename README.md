@@ -1,5 +1,11 @@
 # Vacancy Apply Page
 
+## Clone project
+
+```sh
+$ git clone https://github.com/fcaravana/vacancy-page
+```
+
 ### Install node modules
 
 ```sh

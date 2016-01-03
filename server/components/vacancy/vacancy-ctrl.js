@@ -13,9 +13,10 @@ var vacancy = function () {
      */
     var _req = null;
     var _res = null;
+    var _config = {};
 
-    var _uploadsPath = 'app/uploads/repo/';
-    var _vacanciesPath = 'app/components/vacancy/';
+    var _uploadsPath = null;
+    var _vacanciesPath = null;
 
     self.error = false;
     self.errorCode = null;
@@ -25,12 +26,18 @@ var vacancy = function () {
      * 
      * @param {object} req request
      * @param {object} res response
+     * @param {object} config config
      * @returns {undefined}
      */
-    self.start = function (req, res) {
+    self.start = function (req, res, config) {
 
         _req = req;
         _res = res;
+
+        _uploadsPath = config.upload.path;
+        _vacanciesPath = config.store.path;
+
+        _config = config;
 
         if (_verifyFields()) {
             _saveVacancyFiles(req.files);
@@ -167,14 +174,14 @@ var vacancy = function () {
             newVacancy['photo'] = _uploadsPath + 'photo_' + photo.filename + path.extname(photo.originalname);
         }
 
-        var vacanciesContent = fs.readFileSync(_vacanciesPath + 'vacancies.json');
+        var vacanciesContent = fs.readFileSync(_vacanciesPath + _config.store.json);
 
         var vacancies = (vacanciesContent.toString() === '' ? JSON.parse('[]') : JSON.parse(vacanciesContent));
 
         vacancies.push(newVacancy);
 
         var newVacancies = JSON.stringify(vacancies, true, 4);
-        fs.writeFileSync(_vacanciesPath + 'vacancies.json', newVacancies);
+        fs.writeFileSync(_vacanciesPath + _config.store.json, newVacancies);
 
         if (newVacancy.copy === 'true') {
             _sendMailCopy(newVacancy.email, 'Vacancy Submit', JSON.stringify(newVacancy, true, 4).replace(new RegExp(_uploadsPath, 'g'), ''));
@@ -192,11 +199,11 @@ var vacancy = function () {
     var _sendMailCopy = function (to, subject, text) {
 
         var transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {user: 'fcaravana.meetings@gmail.com', pass: 'aminhapasse'}
+            service: _config.mail.service,
+            auth: {user: _config.mail.user, pass: _config.mail.password}
         }, {
-            from: 'fcaravana.meetings@gmail.com',
-            headers: {'Vacancy-Page-Submit': 'Sent'}
+            from: _config.mail.user,
+            headers: {'Vacancy-Page': 'Form Submit'}
         });
 
         transporter.sendMail({

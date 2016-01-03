@@ -61,7 +61,6 @@ define(['app'], function (app) {
              * Show modal if exists nay message to show.
              */
             if (scope.vacancy.error > 1 || scope.vacancy.success) {
-                console.log("entrou");
                 scope.showModal();
             }
         }
