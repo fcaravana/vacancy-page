@@ -58,7 +58,7 @@ define(['app'], function (app) {
             $('#messages').modal({show: false});
             
             /**
-             * Show modal if exists nay message to show.
+             * Show modal if exists any message to show.
              */
             if (scope.vacancy.error > 1 || scope.vacancy.success) {
                 scope.showModal();

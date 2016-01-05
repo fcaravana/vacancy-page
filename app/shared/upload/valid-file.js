@@ -24,7 +24,7 @@ define(['app'], function (app) {
                         fileFormats = ['jpg', 'jpeg'];
                     }
 
-                    if (fileFormats.indexOf(ext) !== -1) {
+                    if (fileFormats.indexOf(ext) !== -1 && document.getElementById(el.attr('name')).files[0].size < 4194304) {
                         $('.' + el.attr('name')).css({
                             "background-image": "url('assets/images/valid.png')",
                             "background-repeat": "no-repeat",
