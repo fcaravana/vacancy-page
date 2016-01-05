@@ -17,6 +17,8 @@ var vacancy = function () {
 
     var _uploadsPath = null;
     var _vacanciesPath = null;
+    
+    var _uploadLimitSize = 4194304;
 
     self.error = false;
     self.errorCode = null;
@@ -63,21 +65,21 @@ var vacancy = function () {
 
         if (_req.files.resume) {
             var resume = _req.files.resume[0];
-            if (path.extname(resume.originalname) !== '.pdf') {
+            if (path.extname(resume.originalname) !== '.pdf' && resume.size < _uploadLimitSize) {
                 self.errorCode = 3;
             }
         }
 
         if (_req.files.portfolio) {
             var portfolio = _req.files.portfolio[0];
-            if (portfolio && (path.extname(portfolio.originalname) !== '.doc' && path.extname(portfolio.originalname) !== '.docx')) {
+            if (portfolio && (path.extname(portfolio.originalname) !== '.doc' && path.extname(portfolio.originalname) !== '.docx') && portfolio.size < _uploadLimitSize) {
                 self.errorCode = 4;
             }
         }
 
         if (_req.files.photo) {
             var photo = _req.files.photo[0];
-            if (photo && (path.extname(photo.originalname) !== '.jpg' && path.extname(photo.originalname) !== '.jpeg')) {
+            if (photo && (path.extname(photo.originalname) !== '.jpg' && path.extname(photo.originalname) !== '.jpeg') && photo.size < _uploadLimitSize) {
                 self.errorCode = 5;
                 fs.unlinkSync(photo.path);
             }
