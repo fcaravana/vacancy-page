@@ -17,7 +17,7 @@ var vacancy = function () {
 
     var _uploadsPath = null;
     var _vacanciesPath = null;
-    
+
     var _uploadLimitSize = 4194304;
 
     self.error = false;
@@ -65,23 +65,22 @@ var vacancy = function () {
 
         if (_req.files.resume) {
             var resume = _req.files.resume[0];
-            if (path.extname(resume.originalname) !== '.pdf' && resume.size < _uploadLimitSize) {
+            if (path.extname(resume.originalname).toLowerCase() !== '.pdf' && resume.size < _uploadLimitSize) {
                 self.errorCode = 3;
             }
         }
 
         if (_req.files.portfolio) {
             var portfolio = _req.files.portfolio[0];
-            if (portfolio && (path.extname(portfolio.originalname) !== '.doc' && path.extname(portfolio.originalname) !== '.docx') && portfolio.size < _uploadLimitSize) {
+            if (portfolio && (path.extname(portfolio.originalname).toLowerCase() !== '.doc' && path.extname(portfolio.originalname).toLowerCase() !== '.docx') && portfolio.size < _uploadLimitSize) {
                 self.errorCode = 4;
             }
         }
 
         if (_req.files.photo) {
             var photo = _req.files.photo[0];
-            if (photo && (path.extname(photo.originalname) !== '.jpg' && path.extname(photo.originalname) !== '.jpeg') && photo.size < _uploadLimitSize) {
+            if (photo && (path.extname(photo.originalname).toLowerCase() !== '.jpg' && path.extname(photo.originalname).toLowerCase() !== '.jpeg') && photo.size < _uploadLimitSize) {
                 self.errorCode = 5;
-                fs.unlinkSync(photo.path);
             }
         }
 
@@ -114,21 +113,21 @@ var vacancy = function () {
 
         if (files.resume) {
             var resume = files.resume[0];
-            if (path.extname(resume.originalname) === '.pdf') {
+            if (path.extname(resume.originalname).toLowerCase() === '.pdf') {
                 _saveFile(resume, 'resume_' + resume.filename + path.extname(resume.originalname));
             }
         }
 
         if (files.portfolio) {
             var portfolio = files.portfolio[0];
-            if (portfolio && (path.extname(portfolio.originalname) === '.doc' || path.extname(portfolio.originalname) === '.docx')) {
+            if (portfolio && (path.extname(portfolio.originalname).toLowerCase() === '.doc' || path.extname(portfolio.originalname).toLowerCase() === '.docx')) {
                 _saveFile(portfolio, 'portfolio_' + portfolio.filename + path.extname(portfolio.originalname));
             }
         }
 
         if (files.photo) {
             var photo = files.photo[0];
-            if (photo && (path.extname(photo.originalname) === '.jpg' || path.extname(photo.originalname) === '.jpeg')) {
+            if (photo && (path.extname(photo.originalname).toLowerCase() === '.jpg' || path.extname(photo.originalname).toLowerCase() === '.jpeg')) {
                 _saveFile(photo, 'photo_' + photo.filename + path.extname(photo.originalname));
             }
         }
